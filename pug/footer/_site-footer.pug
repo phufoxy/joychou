@@ -1,0 +1,27 @@
+footer.b-page-footer
+    .container
+        .row
+            .col-lg-1
+                .b-logo
+                    img(src="./images/partial/logo.png", alt="Logo")
+            .col-lg-3
+                .b-content-footer
+                    p.b-text-norm
+                        :verbatim
+                            &copy; 2017 GOnJoy. All Rights Reserved
+            .col-lg-6
+                nav.b-page-nav
+                    ul.b-list-item
+                        -var listItem = ['NGƯỜI DÙNG','DOANH NGHIỆP','FAQ','VỀ CHÚNG TÔI','BLOCK']
+                        each item in listItem
+                            li.b-item
+                                a(href="#").b-link #{item}
+            .col-lg-2
+                nav.b-page-nav
+                    ul.b-list-social
+                        li.b-item
+                            a(href="#").b-link #[i.fab.fa-facebook-f]
+                        li.b-item
+                            a(href="#").b-link #[i.fab.fa-youtube]
+                        li.b-item
+                            a(href="#").b-link #[i.fab.fa-google-plus-g]

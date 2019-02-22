@@ -1,0 +1,67 @@
+.b-page-footer {
+  position: relative;
+  .b-logo {
+    position: relative;
+    text-align: right;
+    img {
+      width: 60px;
+      &::selection {
+        background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+      }
+    }
+  }
+  .b-content-footer {
+    text-align: left;
+    margin-top: 20px;
+    .b-text-norm {
+      color: $color_white;
+      font-family: "roboto";
+      font-size: 14px;
+      &::selection {
+        background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+      }
+    }
+  }
+  .b-page-nav {
+    .b-list-item {
+      .b-item {
+        margin-top: 20px;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        .b-link {
+          color: $color_white;
+          font-size: 14px;
+          font-family: "Samsung";
+          &::selection {
+            background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+          }
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+    .b-list-social {
+      margin-top: 20px;
+      .b-item {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: $white;
+        border-radius: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+        i {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          @include tranform(translate(-50%, -50%));
+          color: #ff4e40;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

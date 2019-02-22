@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Samsung";
+  src: url("../fonts/SamsungSharpSans-Bold-UTF8.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+$color_white: rgba(255, 255, 255, 0.7);
+@mixin tranform($para) {
+  transform: $para;
+  -moz-transform: $para;
+  -webkit-transform: $para;
+  -ms-transform: $para;
+}
+
+.b-page-header {
+  position: relative;
+  padding: 20px 0;
+  .b-logo {
+    img {
+      width: 80px;
+      &::selection {
+        background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+      }
+    }
+  }
+  .b-page-nav {
+    .b-item {
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 25px;
+      .b-link {
+        font-family: "Samsung";
+        color: $color_white;
+        font-size: 14px;
+        &::selection {
+          background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  .b-login {
+    text-align: right;
+    .b-item-lang {
+      display: block;
+      @include tranform(translate(0, -15px));
+      .b-link {
+        color: $color_white;
+        text-decoration: none;
+        font-family: "Samsung";
+        font-size: 14px;
+        &::selection {
+          background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    .b-item {
+      display: inline;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      &.is-active {
+        border: 1.2px solid $white;
+        border-radius: 5px;
+      }
+      .b-link {
+        color: $color_white;
+        font-size: 14px;
+        font-family: "Samsung";
+        text-decoration: none;
+        &::selection {
+          background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}

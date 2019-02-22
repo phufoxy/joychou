@@ -1,0 +1,22 @@
+header.b-page-header
+    .container
+        .row
+            .col-lg-1
+                .b-logo
+                    a(href="#").b-link
+                        img(src="./images/partial/logo.png", alt="Logo")
+            .col-lg-6
+                nav.b-page-nav
+                    ul.b-list-item
+                        -var listItem = ['NGƯỜI DÙNG','DOANH NGHIỆP','FAQ','VỀ CHÚNG TÔI','BLOCK']
+                        each item in listItem
+                            li.b-item
+                                a(href="#").b-link #{item}
+            .col-lg-5
+                .b-login
+                    .b-item-lang
+                        a(href="#").b-link ENGLISH
+                    .b-item
+                        a(href="#").b-link ĐĂNG NHẬP
+                    .b-item.is-active
+                        a(href="#").b-link Đăng ký miễn phí

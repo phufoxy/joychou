@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+.b-loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+}
+.b-loader .b-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 9;
+}
+.b-loader .b-loader {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+.b-loader .b-loader img {
+  width: 100px;
+}
+
+@font-face {
+  font-family: "Samsung";
+  src: url("../fonts/SamsungSharpSans-Bold-UTF8.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+.b-page-header {
+  position: relative;
+  padding: 20px 0;
+}
+.b-page-header .b-logo img {
+  width: 80px;
+}
+.b-page-header .b-logo img::selection {
+  background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+}
+.b-page-header .b-page-nav .b-item {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 25px;
+}
+.b-page-header .b-page-nav .b-item .b-link {
+  font-family: "Samsung";
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+.b-page-header .b-page-nav .b-item .b-link::selection {
+  background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+}
+.b-page-header .b-page-nav .b-item .b-link:hover {
+  color: #fff;
+}
+.b-page-header .b-login {
+  text-align: right;
+}
+.b-page-header .b-login .b-item-lang {
+  display: block;
+  transform: translate(0, -15px);
+  -moz-transform: translate(0, -15px);
+  -webkit-transform: translate(0, -15px);
+  -ms-transform: translate(0, -15px);
+}
+.b-page-header .b-login .b-item-lang .b-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-family: "Samsung";
+  font-size: 14px;
+}
+.b-page-header .b-login .b-item-lang .b-link::selection {
+  background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+}
+.b-page-header .b-login .b-item-lang .b-link:hover {
+  color: #fff;
+}
+.b-page-header .b-login .b-item {
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.b-page-header .b-login .b-item.is-active {
+  border: 1.2px solid #fff;
+  border-radius: 5px;
+}
+.b-page-header .b-login .b-item .b-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-family: "Samsung";
+  text-decoration: none;
+}
+.b-page-header .b-login .b-item .b-link::selection {
+  background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+}
+.b-page-header .b-login .b-item .b-link:hover {
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 3px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #007bff;
+  box-shadow: inset 0 0 6px #ff4e40;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+  height: 2px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.b-index {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+  background-image: -moz-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+  background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+}
+
+.b-page-intro {
+  position: relative;
+}
+.b-page-intro .b-overate {
+  text-align: center;
+  background-image: url("../images/index/img-1.png");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: bottom center;
+  height: 450px;
+}
+.b-page-intro .b-overate::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.7);
+  right: 10px;
+  top: 0;
+}
+.b-page-intro .b-overate .b-content {
+  padding: 0 70px 0 0;
+}
+.b-page-intro .b-overate .b-content .b-text-title {
+  color: #fff;
+  font-family: "Samsung";
+  font-size: 36px;
+}
+.b-page-intro .b-overate .b-content .b-text-title::selection {
+  background: #ed2839;
+}
+.b-page-intro .b-overate .b-content .b-text-norm {
+  margin-top: 20px;
+  color: #fff;
+  font-family: "roboto";
+  margin-bottom: 30px;
+}
+.b-page-intro .b-overate .b-content .b-text-norm::selection {
+  background: #ed2839;
+}
+.b-page-intro .b-overate .b-content .b-link {
+  background-color: #fff;
+  padding: 18px 50px 15px 50px;
+  font-family: "Samsung";
+  border-radius: 50px;
+  color: #000;
+  text-decoration: none;
+}
+.b-page-intro .b-overate .b-content .b-link::selection {
+  background: #ed2839;
+}
+.b-page-intro .b-overate > .b-images {
+  position: relative;
+  width: 100%;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 10%);
+  -moz-transform: translate(-50%, 10%);
+  -webkit-transform: translate(-50%, 10%);
+  -ms-transform: translate(-50%, 10%);
+}
+.b-page-intro .b-overate > .b-images img {
+  width: 200px;
+}
+.b-page-intro .b-enterprise {
+  background-image: url("../images/index/img-2.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 100% 80%;
+  height: 450px;
+  width: 100%;
+}
+.b-page-intro .b-enterprise .b-content {
+  text-align: center;
+  padding: 0 0px 0 0px;
+}
+.b-page-intro .b-enterprise .b-content .b-text-title {
+  color: #fff;
+  font-family: "Samsung";
+  font-size: 36px;
+}
+.b-page-intro .b-enterprise .b-content .b-text-title::selection {
+  background: #ed2839;
+}
+.b-page-intro .b-enterprise .b-content .b-text-norm {
+  margin-top: 20px;
+  color: #fff;
+  font-family: "roboto";
+  margin-bottom: 30px;
+}
+.b-page-intro .b-enterprise .b-content .b-text-norm::selection {
+  background: #ed2839;
+}
+.b-page-intro .b-enterprise .b-content .b-link {
+  background-color: #fff;
+  padding: 18px 50px 15px 50px;
+  font-family: "Samsung";
+  border-radius: 50px;
+  color: #000;
+  text-decoration: none;
+}
+.b-page-intro .b-enterprise .b-content .b-link::selection {
+  background: #ed2839;
+}
+.b-page-intro .b-enterprise > .b-images {
+  position: relative;
+  width: 100%;
+  transform: translate(50%, 10%);
+  -moz-transform: translate(50%, 10%);
+  -webkit-transform: translate(50%, 10%);
+  -ms-transform: translate(50%, 10%);
+}
+.b-page-intro .b-enterprise > .b-images img {
+  width: 70%;
+}
+
+.b-page-footer {
+  position: relative;
+}
+.b-page-footer .b-logo {
+  position: relative;
+  text-align: right;
+}
+.b-page-footer .b-logo img {
+  width: 60px;
+}
+.b-page-footer .b-logo img::selection {
+  background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+}
+.b-page-footer .b-content-footer {
+  text-align: left;
+  margin-top: 20px;
+}
+.b-page-footer .b-content-footer .b-text-norm {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "roboto";
+  font-size: 14px;
+}
+.b-page-footer .b-content-footer .b-text-norm::selection {
+  background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+}
+.b-page-footer .b-page-nav .b-list-item .b-item {
+  margin-top: 20px;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.b-page-footer .b-page-nav .b-list-item .b-item .b-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-family: "Samsung";
+}
+.b-page-footer .b-page-nav .b-list-item .b-item .b-link::selection {
+  background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+}
+.b-page-footer .b-page-nav .b-list-item .b-item .b-link:hover {
+  color: #fff;
+}
+.b-page-footer .b-page-nav .b-list-social {
+  margin-top: 20px;
+}
+.b-page-footer .b-page-nav .b-list-social .b-item {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.b-page-footer .b-page-nav .b-list-social .b-item i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #ff4e40;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,31 @@
+doctype html
+html(lang='eng')
+    include head/_site-head
+    body
+        include loader/_site-loader
+        .b-index
+            include navbar/_site-navbar
+            section.b-page-intro
+                .container-fluid
+                    .row
+                        .col-lg-6
+                            .b-overate.wow.bounceInLeft(data-wow-delay=".5s",data-wow-duration="1s")
+                                .b-content
+                                    h3.b-text-title Trợ lý Ảo đột phá
+                                    p.b-text-norm 
+                                        :verbatim
+                                            Người trở lý với lời khuyên ẩm thực chất lừ cho bán. Indox ngày Gomjou trên Facenook Messenger.
+                                    a(href="#").b-link TÌM HIỂU NGAY
+                        .col-lg-6
+                            .b-enterprise.wow.bounceInRight(data-wow-delay=".5s",data-wow-duration="1s")
+                                .b-content
+                                    h3.b-text-title Joy và Doanh Nghiệp
+                                    p.b-text-norm 
+                                        :verbatim
+                                            Kết nối khách hàng của bản 24/7
+                                            Hổ trọ việc kinh doanh của bán 24/7
+                                    a(href="#").b-link TÌM HIỂ NGAY
+                include footer/_site-footer
+        script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+        script(src="./js/wow.js")
+        script(src="./js/main.js")
