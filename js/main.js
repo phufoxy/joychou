@@ -1,3 +1,17 @@
+window.onload = function () {
+    window.onscroll = function () {
+        scrollSticky();
+    }
+    var header = document.getElementById("b-page-header");
+    var sticky = header.offsetTop;
+    function scrollSticky() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    }
+}
 wow = new WOW(
     {
         animateClass: 'animated',

@@ -4,6 +4,7 @@
   font-family: "roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
+$break_large: 1225px;
 @import "site-loader";
 @import "site-navbar";
 @import "site-page";

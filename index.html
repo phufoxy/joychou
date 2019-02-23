@@ -16,15 +16,22 @@
       </div>
     </div>
     <div class="b-index">
-      <header class="b-page-header">
+      <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close"><span class="icon-close2 js-menu-toggle"><i class="fas fa-window-close"></i></span></div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+      <header class="b-page-header" id="b-page-header">
         <div class="container">
           <div class="row">
-            <div class="col-lg-1">
+            <div class="col-lg-1 col-md-1 col-sm-1">
               <div class="b-logo"><a class="b-link" href="#"><img src="./images/partial/logo.png" alt="Logo"></a></div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-6">
               <nav class="b-page-nav">
-                <ul class="b-list-item">
+                <div class="b-open-menu d-lg-none"><a class="site-menu-toggle js-menu-toggle" href="#"><i class="fas fa-bars"></i></a></div>
+                <ul class="b-list-item js-clone-nav d-lg-block">
                   <li class="b-item"><a class="b-link" href="#">NGƯỜI DÙNG</a></li>
                   <li class="b-item"><a class="b-link" href="#">DOANH NGHIỆP</a></li>
                   <li class="b-item"><a class="b-link" href="#">FAQ</a></li>
@@ -33,7 +40,7 @@
                 </ul>
               </nav>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 col-md-5 col-sm-5">
               <div class="b-login">
                 <div class="b-item-lang"><a class="b-link" href="#">ENGLISH</a></div>
                 <div class="b-item"><a class="b-link" href="#">ĐĂNG NHẬP</a></div>
