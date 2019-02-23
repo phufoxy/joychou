@@ -9,6 +9,9 @@
         background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
       }
     }
+    @media screen and(max-width:992px) {
+      text-align: center;
+    }
   }
   .b-content-footer {
     text-align: left;
@@ -20,6 +23,9 @@
       &::selection {
         background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
       }
+    }
+    @media screen and(max-width:992px) {
+      text-align: center;
     }
   }
   .b-page-nav {
@@ -63,6 +69,9 @@
           font-size: 12px;
         }
       }
+    }
+    @media screen and(max-width:992px) {
+      display: none;
     }
   }
 }
