@@ -455,7 +455,13 @@ body {
 }
 @media screen and (max-width: 992px) {
   .b-index .b-page-intro .b-overate::after {
-    display: none;
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    left: 0;
+    top: 100%;
   }
   .b-index .b-page-intro .b-overate .b-content {
     padding: 0 0px 0 0;
@@ -511,6 +517,20 @@ body {
 }
 .b-index .b-page-intro .b-enterprise > .b-images img {
   width: 70%;
+}
+@media screen and (max-width: 992px) {
+  .b-index .b-page-intro .b-enterprise {
+    margin-top: 10px;
+  }
+  .b-index .b-page-intro .b-enterprise::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    left: 0;
+    top: 90%;
+  }
 }
 
 .b-page-footer {

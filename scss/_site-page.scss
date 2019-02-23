@@ -90,7 +90,13 @@ body {
       }
       @media screen and(max-width:992px) {
         &::after {
-          display: none;
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          background-color: $color_white;
+          left: 0;
+          top: 100%;
         }
         .b-content {
           padding: 0 0px 0 0;
@@ -143,6 +149,18 @@ body {
         @include tranform(translate(50%, 10%));
         img {
           width: 70%;
+        }
+      }
+      @media screen and(max-width:992px) {
+        margin-top: 10px;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          background-color: $color_white;
+          left: 0;
+          top: 90%;
         }
       }
     }
