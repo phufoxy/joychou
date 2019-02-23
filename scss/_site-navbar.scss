@@ -21,6 +21,12 @@ $color_white: rgba(255, 255, 255, 0.7);
   position: relative;
   padding: 10px 0;
   @include transition(all 0.3s ease-in-out);
+  &.b-bussiness {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 99999;
+  }
   &.sticky {
     position: fixed;
     width: 100%;
@@ -72,7 +78,7 @@ $color_white: rgba(255, 255, 255, 0.7);
     text-align: right;
     .b-item-lang {
       display: block;
-      @include tranform(translate(0, -15px));
+      @include tranform(translate(0, -10px));
       .b-link {
         color: $color_white;
         text-decoration: none;
@@ -220,7 +226,16 @@ $color_white: rgba(255, 255, 255, 0.7);
       }
     }
   }
-
+  .site-mobile-menu-lang {
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    border: 1px solid #e74852;
+    .b-link {
+      text-decoration: none;
+      font-family: "Samsung";
+    }
+  }
   .site-mobile-menu-body {
     // height: 400px;
     overflow-y: scroll;

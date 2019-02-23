@@ -1,5 +1,8 @@
 .b-page-footer {
   position: relative;
+  &.b-footer-main {
+    background-color: #e74852;
+  }
   .b-logo {
     position: relative;
     text-align: right;
