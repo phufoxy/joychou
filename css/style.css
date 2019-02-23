@@ -370,10 +370,15 @@
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.4em;
+}
+
 .b-index {
-  position: fixed;
-  min-width: 100%;
-  height: 100%;
+  position: relative;
+  width: 100%;
   background-image: -webkit-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
   background-image: -moz-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
   background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
