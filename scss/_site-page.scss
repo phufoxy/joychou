@@ -365,6 +365,15 @@ body {
       }
     }
   }
+  @media screen and(max-width:992px) {
+    margin-bottom: 30px;
+    .b-images {
+      margin-top: 140px;
+    }
+    .b-function {
+      margin-top: 50px;
+    }
+  }
 }
 .b-page-person {
   position: relative;
@@ -443,6 +452,9 @@ body {
         }
       }
     }
+  }
+  @media screen and(max-width:992px) {
+    display: none;
   }
 }
 .b-page-conenct {

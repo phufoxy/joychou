@@ -268,9 +268,13 @@
 }
 .site-mobile-menu .site-mobile-menu-lang {
   position: absolute;
-  right: 0%;
-  top: 10%;
+  left: 50%;
+  top: 70%;
   border: 1px solid #e74852;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 .site-mobile-menu .site-mobile-menu-lang .b-link {
   text-decoration: none;
@@ -760,6 +764,17 @@ body {
   font-family: "roboto";
   font-size: 16px;
 }
+@media screen and (max-width: 992px) {
+  .b-page-function {
+    margin-bottom: 30px;
+  }
+  .b-page-function .b-images {
+    margin-top: 140px;
+  }
+  .b-page-function .b-function {
+    margin-top: 50px;
+  }
+}
 
 .b-page-person {
   position: relative;
@@ -844,6 +859,11 @@ body {
   visibility: visible;
   opacity: 1;
 }
+@media screen and (max-width: 992px) {
+  .b-page-person {
+    display: none;
+  }
+}
 
 .b-page-conenct {
   position: relative;
@@ -874,12 +894,17 @@ body {
 }
 .b-page-conenct .b-content .b-link {
   background-color: #fff;
-  padding: 10px 20px 8px 20px;
+  padding: 16px 20px 10px 20px;
   color: #000;
   font-family: "Samsung";
   border-radius: 50px;
+  font-size: 14px;
   text-decoration: none;
   box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
 }
 .b-page-conenct .b-content .b-link:hover {
   color: #fff;

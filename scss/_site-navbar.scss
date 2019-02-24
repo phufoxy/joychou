@@ -228,9 +228,10 @@ $color_white: rgba(255, 255, 255, 0.7);
   }
   .site-mobile-menu-lang {
     position: absolute;
-    right: 0%;
-    top: 10%;
+    left: 50%;
+    top: 70%;
     border: 1px solid #e74852;
+    @include tranform(translate(-50%, -50%));
     .b-link {
       text-decoration: none;
       font-family: "Samsung";
