@@ -55,7 +55,7 @@
   position: absolute;
   width: 100%;
   top: 0;
-  z-index: 99999;
+  z-index: 999;
 }
 .b-page-header.sticky {
   position: fixed;
@@ -402,6 +402,10 @@ a::selection {
   background: #ed2839;
 }
 
+img::selection {
+  background: transparent;
+}
+
 @keyframes animationArrow {
   0% {
     top: 80%;
@@ -410,10 +414,25 @@ a::selection {
     top: 83%;
   }
 }
+::-moz-selection {
+  color: #fff;
+  background: #ed2839;
+}
+
+::selection {
+  color: #fff;
+  background: #ed2839;
+}
+
 body {
   padding: 0;
   margin: 0;
   line-height: 1.4em;
+}
+
+.b-wrapper {
+  background-image: url("../images/home/background-top.png");
+  z-index: 1;
 }
 
 .b-index {
@@ -560,6 +579,125 @@ body {
   background-image: url("../images/business/background-top.png");
   background-size: 100% 100%;
   height: 768px;
+}
+.b-page-hero.b-users {
+  background-image: url("../images/home/top-banner.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+.b-page-hero.b-users .b-content {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.b-page-hero.b-users .b-content .b-text-title {
+  font-family: "Samsung";
+  font-size: 36px;
+}
+.b-page-hero.b-users .b-content .b-text-norm {
+  font-family: "roboto";
+  width: 60%;
+  margin: 0 auto;
+}
+.b-page-hero.b-users .b-btn-messeger {
+  position: absolute;
+  left: 20%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  color: #fff;
+  font-family: "Samsung";
+  font-size: 18x;
+  padding: 16px 20px 12px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+  width: 200px;
+  text-align: center;
+}
+.b-page-hero.b-users .b-btn-messeger::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  font-size: 26px;
+  left: 20px;
+  top: 16px;
+}
+.b-page-hero.b-users .b-scroll-bottom .b-link {
+  color: #888888;
+}
+.b-page-hero.b-users .b-images {
+  position: absolute;
+  width: 40%;
+  left: 70%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.b-page-hero.b-users .b-images img {
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .b-page-hero.b-users .b-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  .b-page-hero.b-users .b-images {
+    visibility: hidden;
+  }
+  .b-page-hero.b-users .b-btn-messeger {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+    background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+    background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+    background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+    color: #fff;
+    font-family: "Samsung";
+    font-size: 18x;
+    padding: 16px 20px 12px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+    width: 200px;
+    text-align: center;
+  }
+  .b-page-hero.b-users .b-btn-messeger::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    content: "";
+    font-weight: 900;
+    font-size: 26px;
+    left: 20px;
+    top: 16px;
+  }
 }
 .b-page-hero .b-content {
   position: absolute;
@@ -915,6 +1053,206 @@ body {
 .b-page-conenct .b-content .b-link:hover {
   color: #fff;
   background-color: #e74852;
+}
+
+.b-page-help {
+  position: relative;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+.b-page-help .b-heading .b-text-norm {
+  font-family: "roboto";
+  font-size: 16px;
+  color: #888888;
+  font-weight: 700;
+}
+.b-page-help .b-heading .b-text-title {
+  font-family: "Samsung";
+  font-size: 26px;
+}
+.b-page-help .b-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.b-page-help .b-card .b-card-item {
+  width: 20%;
+  text-align: center;
+}
+.b-page-help .b-card .b-card-item .b-text-norm {
+  font-family: "roboto";
+  font-size: 16px;
+  color: #888888;
+}
+.b-page-help .b-card .b-card-item .b-icon {
+  width: 150px;
+  margin: 0 auto;
+}
+.b-page-help .b-card .b-card-item .b-icon img {
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .b-page-help .b-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .b-page-help .b-card .b-card-item {
+    width: 50%;
+  }
+}
+
+.b-page-service {
+  position: relative;
+  height: 400px;
+  background-image: url("../images/home/block-bottom-3.png");
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
+}
+.b-page-service .b-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.b-page-service .b-content .b-text-title {
+  font-family: "Samsung";
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.b-page-service .b-content .b-btn-messeger {
+  position: relative;
+  background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  color: #fff;
+  font-family: "Samsung";
+  font-size: 18x;
+  padding: 20px 50px 16px 50px;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+  width: 250px;
+  text-align: center;
+}
+.b-page-service .b-content .b-btn-messeger::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  font-size: 26px;
+  left: 20px;
+  top: 16px;
+}
+@media screen and (max-width: 992px) {
+  .b-page-service {
+    margin-top: 150px;
+  }
+}
+
+.b-page-business {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("../images/home/bottom-banner.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: auto;
+}
+.b-page-business .b-images {
+  margin-top: 50px;
+  width: 50%;
+}
+.b-page-business .b-content {
+  position: relative;
+  margin-top: 50px;
+  width: 50%;
+}
+.b-page-business .b-content .b-text-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Samsung";
+  font-size: 26px;
+  text-align: center;
+}
+.b-page-business .b-content .b-text-norm {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "roboto";
+  font-size: 16px;
+  text-align: center;
+}
+.b-page-business .b-content .b-link {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 250px;
+  border: 0.5px solid #fff;
+  padding: 12px 0 10px 0;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Samsung";
+}
+.b-page-business .b-content .b-link::after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  font-size: 20px;
+  padding: 10px;
+}
+@media screen and (max-width: 992px) {
+  .b-page-business {
+    height: 1000px;
+  }
+  .b-page-business .b-images {
+    margin-top: 0;
+    width: 100%;
+  }
+  .b-page-business .b-content {
+    margin-top: 0;
+    width: 100%;
+  }
+  .b-page-business .b-content .b-text-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+  }
+  .b-page-business .b-content .b-text-norm {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+  }
 }
 
 .b-page-footer {

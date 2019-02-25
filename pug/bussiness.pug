@@ -23,10 +23,11 @@ html(lang='en')
                                 .b-open-menu.d-lg-none
                                     a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
                                 ul.b-list-item.js-clone-nav.d-lg-block
-                                    -var listItem = ['NGƯỜI DÙNG','DOANH NGHIỆP','FAQ','VỀ CHÚNG TÔI','BLOCK']
-                                    each item in listItem
+                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'bussiness.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    each itemList in listItem
                                         li.b-item
-                                            a(href="#").b-link #{item}
+                                            -var get = itemList.link
+                                            a(href=get).b-link #{itemList.item}
                         .col-lg-5
                             .b-login.js-clone-lang.d-lg-block.d-none
                                 .b-item-lang
@@ -36,7 +37,7 @@ html(lang='en')
                                 .b-item.is-active
                                     a(href="#").b-link Đăng ký miễn phí
 
-            section.b-page-hero
+            section.b-page-hero#b-page-hero
                 .container
                     .b-content
                         h3.b-text-title Kết nối với khách hàng của bạn
@@ -49,7 +50,7 @@ html(lang='en')
                             a(href="#").b-link Đăng ký miễn phí
                     .b-images
                         img(src="./images/business/banner-top.png", alt="Bussiness",style="width:100%")
-                    .b-scroll-bottom
+                    .b-scroll-bottom#top-menu
                         a(href="#function").b-link CUỘN XUỐNG
             section.b-page-customer
                 .container
@@ -282,12 +283,13 @@ html(lang='en')
                                     :verbatim
                                         &copy; 2017 GOnJoy. All Rights Reserved
                         .col-lg-6
-                            nav.b-page-nav
-                                ul.b-list-item
-                                    -var listItem = ['NGƯỜI DÙNG','DOANH NGHIỆP','FAQ','VỀ CHÚNG TÔI','BLOCK']
-                                    each item in listItem
+                            nav.b-page-nav#top-header
+                                ul.b-list-item.js-clone-nav.d-lg-block
+                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'bussiness.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    each itemList in listItem
                                         li.b-item
-                                            a(href="#").b-link #{item}
+                                            -var get = itemList.link
+                                            a(href=get).b-link #{itemList.item}
                         .col-lg-2
                             nav.b-page-nav
                                 ul.b-list-social

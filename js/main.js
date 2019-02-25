@@ -6,27 +6,31 @@ window.onload = function () {
     var sticky = header.offsetTop;
     function scrollSticky() {
         if (window.pageYOffset > sticky) {
-            header.classList.add('sticky');
+            header
+                .classList
+                .add('sticky');
         } else {
-            header.classList.remove('sticky');
+            header
+                .classList
+                .remove('sticky');
         }
     }
 }
-wow = new WOW(
-    {
-        animateClass: 'animated',
-        offset: 100,
-        callback: function (box) {
-            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        }
+wow = new WOW({
+    animateClass: 'animated',
+    offset: 100,
+    callback: function (box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
     }
-);
+});
 wow.init();
 jQuery(document).ready(function ($) {
     "use strict";
     // loading page
     var loaderPage = function () {
-        $('.b-loader').delay(500).fadeOut('slow');
+        $('.b-loader')
+            .delay(500)
+            .fadeOut('slow');
     }
     // Document on load.
     $(document).ready(function () {
@@ -34,13 +38,20 @@ jQuery(document).ready(function ($) {
     });
     var siteMenuClone = function () {
 
-        $('.js-clone-nav').each(function () {
-            var $this = $(this);
-            $this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
-        });
+        $('.js-clone-nav')
+            .each(function () {
+                var $this = $(this);
+                $this
+                    .clone()
+                    .attr('class', 'site-nav-wrap')
+                    .appendTo('.site-mobile-menu-body');
+            });
         $('.js-clone-lang').each(function () {
             var $this = $(this);
-            $this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-lang');
+            $this
+                .clone()
+                .attr('class', 'site-nav-wrap')
+                .appendTo('.site-mobile-menu-lang');
         });
         setTimeout(function () {
             var counter = 0;
@@ -49,15 +60,19 @@ jQuery(document).ready(function ($) {
 
                 $this.prepend('<span class="arrow-collapse collapsed">');
 
-                $this.find('.arrow-collapse').attr({
-                    'data-toggle': 'collapse',
-                    'data-target': '#collapseItem' + counter,
-                });
+                $this
+                    .find('.arrow-collapse')
+                    .attr({
+                        'data-toggle': 'collapse',
+                        'data-target': '#collapseItem' + counter
+                    });
 
-                $this.find('> ul').attr({
-                    'class': 'collapse',
-                    'id': 'collapseItem' + counter,
-                });
+                $this
+                    .find('> ul')
+                    .attr({
+                        'class': 'collapse',
+                        'id': 'collapseItem' + counter
+                    });
 
                 counter++;
 
@@ -111,4 +126,47 @@ jQuery(document).ready(function ($) {
         });
     };
     siteMenuClone();
+    // Cache selectors
+    var topMenu = $("#top-menu"),
+        topMenuHeight = topMenu.outerHeight() + 15,
+        // All list items
+        menuItems = topMenu.find("a");
+
+    // Bind click handler to menu items so we can get a fancy scroll animation
+    menuItems.click(function (e) {
+        var href = $(this).attr("href"),
+            offsetTop = href === "#"
+                ? 0
+                : $(href)
+                    .offset()
+                    .top - topMenuHeight + 1;
+        $('html, body')
+            .stop()
+            .animate({
+                scrollTop: offsetTop
+            }, 900);
+        e.preventDefault();
+    });
+    // Cache selectors
+    var topMenu1 = $("#top-header"),
+        topMenuHeight1 = topMenu1.outerHeight() + 15,
+        // All list items
+        menuItems1 = topMenu1.find("a");
+
+    // Bind click handler to menu items so we can get a fancy scroll animation
+    menuItems1.click(function (e) {
+        var href = $(this).attr("href"),
+            offsetTop = href === "#"
+                ? 0
+                : $(href)
+                    .offset()
+                    .top - topMenuHeight1 + 1;
+        $('html, body')
+            .stop()
+            .animate({
+                scrollTop: offsetTop
+            }, 900);
+        e.preventDefault();
+    });
+
 });

@@ -1,0 +1,190 @@
+doctype html
+html(lang='en')
+    include head/_site-head
+    body
+        include loader/_site-loader
+        .b-wrapper
+            .site-mobile-menu
+                .site-mobile-menu-header
+                    .site-mobile-menu-close
+                        span.icon-close2.js-menu-toggle
+                            i.fas.fa-window-close
+                .site-mobile-menu-body
+                .site-mobile-menu-lang
+            header.b-page-header.b-bussiness#b-page-header
+                .container
+                    .row
+                        .col-lg-1
+                            .b-logo
+                                a(href="index.html").b-link
+                                    img(src="./images/partial/logo.png", alt="Logo")
+                        .col-lg-6
+                            nav.b-page-nav
+                                .b-open-menu.d-lg-none
+                                    a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
+                                ul.b-list-item.js-clone-nav.d-lg-block
+                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'bussiness.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    each itemList in listItem
+                                        li.b-item
+                                            -var get = itemList.link
+                                            a(href=get).b-link #{itemList.item}
+                        .col-lg-5
+                            .b-login.js-clone-lang.d-lg-block.d-none
+                                .b-item-lang
+                                    a(href="#").b-link ENGLISH
+                                .b-item
+                                    a(href="#").b-link ĐĂNG NHẬP
+                                .b-item.is-active
+                                    a(href="#").b-link Đăng ký miễn phí
+            section.b-page-hero.b-users
+                .container
+                    .b-content
+                        h3.b-text-title Trợ lý Ảo đột phá
+                        p.b-text-norm   Người trợ lý với lời khuyên ẩm thực chất lừ cho bạn. Inbox ngay Gonhhoy trên Facebook Messager
+                        
+                    a(href="#").b-btn-messeger Messager
+                    .b-images
+                        img(src="./images/home/top-banner-item.png", alt="Bussiness")
+                    .b-scroll-bottom#top-menu
+                        a(href="#function").b-link CUỘN XUỐNG
+            section.b-page-help
+                .container
+                    .row
+                        .col-lg-8.offset-lg-2
+                            .b-heading.text-center
+                                p.b-text-norm NỔI BẬT CỦA JOY
+                                h3.b-text-title Joy giúp gì cho bạn ?
+                    div.b-card
+                        -var listItem = [{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'TÌm Đúng Địa Điểm'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Đề xuất món ăn'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Tiết kiệm thời gian'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Tiết Kiệm Chi Phí'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Tìm Theo Cảm Xúc'},{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'TÌm Đúng Địa Điểm'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Đề xuất món ăn'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Tiết kiệm thời gian'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Tiết Kiệm Chi Phí'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Tìm Theo Cảm Xúc'}]
+                        each item in listItem
+                            .b-card-item
+                                .b-icon
+                                    -var img = item.scr
+                                    img(src=img, alt="Icon")
+                                .b-content
+                                    p.b-text-norm #{item.title}
+            section.b-page-function#function
+                .container-fluid
+                    .row
+                        .col-lg-7
+                            .b-images.wow.bounceInLeft(data-wow-delay=".5s",data-wow-duration="1s")
+                                img(src="./images/home/block-1.png", alt="Table",style="width:100%")
+                        .col-lg-5
+                            .b-function
+                                .b-content.wow.bounceInRight(data-wow-delay=".5s",data-wow-duration="1s")
+                                    h3.b-text-title Gợi Ý Sức Khỏe
+                                    p.b-text-norm
+                                        :verbatim
+                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                                    
+                    .row
+                        .col-lg-5
+                            .b-function
+                                .b-content.wow.bounceInLeft(data-wow-delay=".5s",data-wow-duration="1s")
+                                    h3.b-text-title Chơi game góp ý
+                                    p.b-text-norm
+                                        :verbatim
+                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                                            elementum in.
+                        .col-lg-7
+                            .b-images.wow.bounceInRight(data-wow-delay=".5s",data-wow-duration="1s")
+                                img(src="./images/home/block-2.png", alt="Table",style="width:100%")
+                    .row
+                        .col-lg-7
+                            .b-images.wow.bounceInLeft(data-wow-delay=".5s",data-wow-duration="1s")
+                                img(src="./images/home/block-3.png", alt="Table",style="width:100%")
+                        .col-lg-5
+                            .b-function
+                                .b-content.wow.bounceInRight(data-wow-delay=".5s",data-wow-duration="1s")
+                                    h3.b-text-title Hệ thống phân tích ngôn ngữ
+                                    p.b-text-norm
+                                        :verbatim
+                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                                            elementum in.
+                                  
+                    .row
+                        .col-lg-5
+                            .b-function
+                                .b-content.wow.bounceInLeft(data-wow-delay=".5s",data-wow-duration="1s")
+                                    h3.b-text-title Cá Nhân hóa
+                                    p.b-text-norm
+                                        :verbatim
+                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                                            elementum in.
+                        .col-lg-7
+                            .b-images.wow.bounceInRight(data-wow-delay=".5s",data-wow-duration="1s")
+                                img(src="./images/home/block-4.png", alt="Table",style="width:100%")
+                    .row
+                        .col-lg-7
+                            .b-images.wow.bounceInLeft(data-wow-delay=".5s",data-wow-duration="1s")
+                                img(src="./images/business/block-5.png", alt="Table",style="width:100%")
+                        .col-lg-5
+                            .b-function
+                                .b-content.wow.bounceInRight(data-wow-delay=".5s",data-wow-duration="1s")
+                                    h5.b-text-function Tính năng
+                                    h3.b-text-title Quản lý nhân viên
+                                    p.b-text-norm
+                                        :verbatim
+                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                                            elementum in.
+                                    .b-list-function
+                                        .b-item
+                                            .b-icon
+                                                i.fas.fa-check
+                                            p.b-text-norm Phân quyền nhân viên của quán
+                                        .b-item
+                                            .b-icon
+                                                i.fas.fa-check
+                                            p.b-text-norm Truy cập dữ liệu hoạt động của nhân viên
+            section.b-page-service
+                .b-content
+                    h3.b-text-title.wow.bounceInUp(data-wow-delay=".5s",data-wow-duration="1s") Hãy để joy phục vụ bạn ngay bây giờ !
+                    a(href="#").b-btn-messeger Messenger
+            section.b-page-business
+                .b-images.wow.bounceInRight(data-wow-delay=".5s",data-wow-duration="1s")
+                    img(src="./images/home/bottom-banner-item.png", alt="Banner", style="width:100%")
+                .b-content
+                    h3.b-text-title Joy và Doanh nghiệp
+                    p.b-text-norm Kết nối khách hàng của bạn 24/7 Hổ trợ việc kinh doanh của bạn 24/7
+                    a(href="#").b-link Khám phá các lợi ích
+            footer.b-page-footer.b-footer-main
+                .container
+                    .row
+                        .col-lg-1
+                            .b-logo
+                                img(src="./images/partial/logo.png", alt="Logo")
+                        .col-lg-3
+                            .b-content-footer
+                                p.b-text-norm
+                                    :verbatim
+                                        &copy; 2017 GOnJoy. All Rights Reserved
+                        .col-lg-6
+                            nav.b-page-nav
+                                ul.b-list-item.js-clone-nav.d-lg-block
+                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'bussiness.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    each itemList in listItem
+                                        li.b-item
+                                            -var get = itemList.link
+                                            a(href=get).b-link #{itemList.item}
+                        .col-lg-2
+                            nav.b-page-nav
+                                ul.b-list-social
+                                    li.b-item
+                                        a(href="#").b-link #[i.fab.fa-facebook-f]
+                                    li.b-item
+                                        a(href="#").b-link #[i.fab.fa-youtube]
+                                    li.b-item
+                                        a(href="#").b-link #[i.fab.fa-google-plus-g]
+        script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+        script(src="./js/wow.js")
+        script(src="./js/main.js")
