@@ -194,6 +194,11 @@ body {
   background-image: url("../images/business/background-top.png");
   background-size: 100% 100%;
   height: 768px;
+  &.b-about {
+    background-image: url("../images/about-us/Background_Header.png");
+    background-repeat: no-repeat;
+    height: 600px;
+  }
   &.b-users {
     background-image: url("../images/home/top-banner.png");
     background-size: 100% 100%;
@@ -511,6 +516,33 @@ body {
       font-size: 26px;
     }
   }
+  .b-card {
+    position: relative;
+    cursor: pointer;
+    .b-images {
+      width: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        @include transition(all 0.3s ease-in-out);
+        &:hover {
+          @include tranform(scale(1.2));
+        }
+      }
+    }
+    .b-content {
+      margin-top: 20px;
+      text-align: center;
+      .b-text-title {
+        font-family: "Samsung";
+        font-size: 26px;
+      }
+      .b-text-norm {
+        color: #888888;
+        font-family: "roboto";
+      }
+    }
+  }
   .b-tags {
     position: relative;
     background-image: url("../images/business/joy-connect.png");
@@ -798,6 +830,95 @@ body {
         @include tranform(translate(0%, 0%));
       }
       .b-link {
+      }
+    }
+  }
+}
+.b-page-passion {
+  padding: 50px 0;
+  .b-images {
+    img {
+      width: 100%;
+    }
+  }
+  .b-content {
+    .b-text-title {
+      font-family: "Samsung";
+      font-size: 36px;
+    }
+    .b-text-norm {
+      font-family: "roboto";
+      font-size: 16px;
+      line-height: 26px;
+      padding: 0 30px;
+    }
+  }
+}
+.b-page-vision {
+  position: relative;
+  padding: 50px 0;
+  .b-vision {
+    .b-heading {
+      .b-text-title {
+        font-family: "Samsung";
+        font-size: 36px;
+      }
+    }
+    .b-list-item {
+      display: flex;
+      flex-wrap: wrap;
+      .b-icon {
+        width: 20%;
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .b-content {
+        width: 80%;
+        margin-top: 30px;
+        .b-text-norm {
+          font-family: "roboto";
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+.b-page-coe {
+  position: relative;
+  padding: 50px 0;
+  .b-heading {
+    @include tranform(translate(0, -20px));
+    .b-text-title {
+      font-family: "Samsung";
+      font-size: 26px;
+    }
+  }
+  .b-card {
+    position: relative;
+    cursor: pointer;
+    .b-images {
+      width: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        @include transition(all 0.3s ease-in-out);
+        &:hover {
+          @include tranform(scale(1.2));
+        }
+      }
+    }
+    .b-content {
+      margin-top: 20px;
+      text-align: center;
+      .b-text-title {
+        font-family: "Samsung";
+        font-size: 26px;
+      }
+      .b-text-norm {
+        color: #888888;
+        font-family: "roboto";
       }
     }
   }

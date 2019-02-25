@@ -1,0 +1,182 @@
+doctype html
+html(lang='en')
+    include head/_site-head
+    body
+        include loader/_site-loader
+        .b-wrapper
+            .site-mobile-menu
+                .site-mobile-menu-header
+                    .site-mobile-menu-close
+                        span.icon-close2.js-menu-toggle
+                            i.fas.fa-window-close
+                .site-mobile-menu-body
+                .site-mobile-menu-lang
+            header.b-page-header.b-bussiness#b-page-header
+                .container
+                    .row
+                        .col-lg-1
+                            .b-logo
+                                a(href="index.html").b-link
+                                    img(src="./images/partial/logo.png", alt="Logo")
+                        .col-lg-6
+                            nav.b-page-nav
+                                .b-open-menu.d-lg-none
+                                    a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
+                                ul.b-list-item.js-clone-nav.d-lg-block
+                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'bussiness.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    each itemList in listItem
+                                        li.b-item
+                                            -var get = itemList.link
+                                            a(href=get).b-link #{itemList.item}
+                        .col-lg-5
+                            .b-login.js-clone-lang.d-lg-block.d-none
+                                .b-item-lang
+                                    a(href="#").b-link ENGLISH
+                                .b-item
+                                    a(href="#").b-link ĐĂNG NHẬP
+                                .b-item.is-active
+                                    a(href="#").b-link Đăng ký miễn phí
+            section.b-page-hero.b-about
+                .container
+                    .b-scroll-bottom#top-menu
+                        a(href="#vision").b-link CUỘN XUỐNG
+            section.b-page-passion
+                .container
+                    .row
+                        .col-lg-3
+                            .b-content
+                                h3.b-text-title Từ đam mê, Từ khao khát
+                            .b-images
+                                img(src="./images/about-us/Nhan_Tai_Dat_Viec.png", alt="nhanTai")
+                        .col-lg-9
+                            .b-content
+                                p.b-text-norm
+                                    :verbatim
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                                        ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                                        pariatur.
+
+                                        Excepteur sint occaecat cupidatat non proident, 
+                                        sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
+                                        quae ab illo inventore veritatis et quasi architecto beatae vitae
+                                        dicta sunt explicabo.
+            section.b-page-vision#vision
+                .container
+                    .row
+                        .col-lg-6
+                            .b-vision
+                                .b-heading
+                                    h3.b-text-title Tầm nhìn
+                                .b-content
+                                    .b-list-item
+                                        .b-icon
+                                            img(src="./images/about-us/Cong_Nghe.svg", alt="Cong")
+                                        .b-content
+                                            p.b-text-norm Công nghệ 4.0 sẽ thay đổi cách chúng ta sống và làm việc.
+                                    .b-list-item
+                                        .b-icon
+                                            img(src="./images/about-us/Hieu_Qua_Cong_VIec.svg", alt="Cong")
+                                        .b-content
+                                            p.b-text-norm
+                                                :verbatim
+                                                    Hiệu quả công việc, chất lượng cuộc sống trong một thế giới phẳng đang và sẽ là một thử thách cho toàn xã hội.         
+                                    .b-list-item
+                                        .b-icon
+                                            img(src="./images/about-us/Dap_Ung.svg", alt="Cong")
+                                        .b-content
+                                            p.b-text-norm
+                                                :verbatim
+                                                    Đáp ứng kịp thời những mong muốn ẩn sâu bên trong của khách hàng (customer’s insight) là thách thức của mọi doanh nghiệp.
+                        .col-lg-6
+                            .b-vision
+                                .b-heading
+                                    h3.b-text-title Sứ mệnh
+                                .b-content
+                                    .b-list-item
+                                        .b-icon
+                                            img(src="./images/about-us/Tri_Tue_Nhan_Tao.svg", alt="Cong")
+                                        .b-content
+                                            p.b-text-norm
+                                                :verbatim
+                                                    Ứng dụng trí tuệ nhân tạo, big data, IoT xây dựng một trợ lý ảo có khả năng cá nhân hoá cao, dễ dàng chia sẻ, hỗ trợ người dùng trong ăn uống và giải trí.
+                                    .b-list-item
+                                        .b-icon
+                                            img(src="./images/about-us/Khuyen_Cao.svg", alt="Cong")
+                                        .b-content
+                                            p.b-text-norm Công nghệ 4.0 sẽ thay đổi cách chúng ta sống và làm việc.
+                                    .b-list-item
+                                        .b-icon
+                                            img(src="./images/about-us/Thu_Nhap_Trai_Nghiem.svg", alt="Cong")
+                                        .b-content
+                                            p.b-text-norm Công nghệ 4.0 sẽ thay đổi cách chúng ta sống và làm việc.
+            section.b-page-coe
+                .container
+                    .row
+                        .col-lg-12
+                            .b-heading
+                                h3.b-text-title Đội ngũ nhóm phát triển
+                    .row
+                        .col-lg-4
+                            .b-card
+                                .b-images
+                                    img(src="./images/about-us/Oliver.png", alt="Overlight")
+                                .b-content
+                                    h3.b-text-title Bui Hoang KHoa Nguyen
+                                    p.b-text-normm Founder
+                        .col-lg-4
+                            .b-card
+                                .b-images
+                                    img(src="./images/about-us/Oliver.png", alt="Overlight")
+                                .b-content
+                                    h3.b-text-title Bui Hoang KHoa Nguyen
+                                    p.b-text-normm Founder
+                        .col-lg-4
+                            .b-card
+                                .b-images
+                                    img(src="./images/about-us/Oliver.png", alt="Overlight")
+                                .b-content
+                                    h3.b-text-title Bui Hoang KHoa Nguyen
+                                    p.b-text-normm Founder
+                        .col-lg-4
+                            .b-card
+                                .b-images
+                                    img(src="./images/about-us/Oliver.png", alt="Overlight")
+                                .b-content
+                                    h3.b-text-title Bui Hoang KHoa Nguyen
+                                    p.b-text-normm Founder
+            footer.b-page-footer.b-footer-main
+                .container
+                    .row
+                        .col-lg-1
+                            .b-logo
+                                img(src="./images/partial/logo.png", alt="Logo")
+                        .col-lg-3
+                            .b-content-footer
+                                p.b-text-norm
+                                    :verbatim
+                                        &copy; 2017 GOnJoy. All Rights Reserved
+                        .col-lg-6
+                            nav.b-page-nav
+                                ul.b-list-item.d-lg-block
+                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'bussiness.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    each itemList in listItem
+                                        li.b-item
+                                            -var get = itemList.link
+                                            a(href=get).b-link #{itemList.item}
+                        .col-lg-2
+                            nav.b-page-nav
+                                ul.b-list-social
+                                    li.b-item
+                                        a(href="#").b-link #[i.fab.fa-facebook-f]
+                                    li.b-item
+                                        a(href="#").b-link #[i.fab.fa-youtube]
+                                    li.b-item
+                                        a(href="#").b-link #[i.fab.fa-google-plus-g]
+        script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+        script(src="./js/wow.js")
+        script(src="./js/main.js")
