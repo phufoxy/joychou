@@ -133,6 +133,9 @@
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
 }
+.b-page-header .b-logo {
+  text-align: left;
+}
 .b-page-header .b-logo img {
   width: 60px;
 }
@@ -150,14 +153,15 @@
 }
 .b-page-header .b-page-nav .b-item {
   display: inline-block;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-top: 25px;
 }
 .b-page-header .b-page-nav .b-item .b-link {
   font-family: "Samsung";
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
+  text-transform: uppercase;
 }
 .b-page-header .b-page-nav .b-item .b-link::selection {
   background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
@@ -184,7 +188,7 @@
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   font-family: "Samsung";
-  font-size: 14px;
+  font-size: 12px;
 }
 .b-page-header .b-login .b-item-lang .b-link::selection {
   background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
@@ -193,15 +197,22 @@
   color: #fff;
 }
 .b-page-header .b-login .b-item {
-  display: inline;
+  display: inline-block;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  min-width: 130px;
+  text-align: center;
+  margin-top: -5px;
+  cursor: pointer;
 }
 .b-page-header .b-login .b-item.is-active {
   border: 1.2px solid #fff;
   border-radius: 5px;
+}
+.b-page-header .b-login .b-item.is-active:hover {
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
 }
 .b-page-header .b-login .b-item .b-link {
   color: rgba(255, 255, 255, 0.7);
@@ -473,10 +484,10 @@ img::selection {
 
 @keyframes animationArrow {
   0% {
-    top: 80%;
+    top: 60%;
   }
   100% {
-    top: 83%;
+    top: 63%;
   }
 }
 ::-moz-selection {
@@ -535,6 +546,22 @@ body {
 }
 .b-index .b-page-intro .b-overate .b-content {
   padding: 0 70px 0 0;
+  width: 70%;
+  margin: 0 auto;
+}
+.b-index .b-page-intro .b-overate .b-content.b-en {
+  width: 100%;
+  text-align: center;
+}
+.b-index .b-page-intro .b-overate .b-content.b-en .b-text-title {
+  width: 100%;
+  word-wrap: break-word;
+}
+.b-index .b-page-intro .b-overate .b-content.b-en .b-text-norm {
+  width: 80%;
+  word-wrap: break-word;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 .b-index .b-page-intro .b-overate .b-content .b-text-title {
   color: #fff;
@@ -554,6 +581,19 @@ body {
   border-radius: 50px;
   color: #000;
   text-decoration: none;
+  transition: background-image 1s ease-out;
+}
+.b-index .b-page-intro .b-overate .b-content .b-ripple {
+  background-origin: center;
+  transition: background 0.8s;
+}
+.b-index .b-page-intro .b-overate .b-content .b-ripple:hover {
+  background: #fff radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+.b-index .b-page-intro .b-overate .b-content .b-ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }
 .b-index .b-page-intro .b-overate > .b-images {
   position: relative;
@@ -593,6 +633,16 @@ body {
 .b-index .b-page-intro .b-enterprise .b-content {
   text-align: center;
   padding: 0 0px 0 0px;
+  width: 60%;
+  margin: 0 auto;
+}
+.b-index .b-page-intro .b-enterprise .b-content.b-en .b-text-title {
+  height: 80px;
+}
+.b-index .b-page-intro .b-enterprise .b-content.b-en .b-text-norm {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 .b-index .b-page-intro .b-enterprise .b-content .b-text-title {
   color: #fff;
@@ -600,7 +650,6 @@ body {
   font-size: 36px;
 }
 .b-index .b-page-intro .b-enterprise .b-content .b-text-norm {
-  margin-top: 20px;
   color: #fff;
   font-family: "roboto";
   margin-bottom: 30px;
@@ -612,6 +661,18 @@ body {
   border-radius: 50px;
   color: #000;
   text-decoration: none;
+}
+.b-index .b-page-intro .b-enterprise .b-content .b-ripple {
+  background-origin: center;
+  transition: background 0.8s;
+}
+.b-index .b-page-intro .b-enterprise .b-content .b-ripple:hover {
+  background: #fff radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+.b-index .b-page-intro .b-enterprise .b-content .b-ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }
 .b-index .b-page-intro .b-enterprise > .b-images {
   position: relative;
@@ -638,6 +699,9 @@ body {
     top: 90%;
   }
 }
+.b-index .b-page-footer {
+  border-top: none;
+}
 
 .b-page-hero {
   position: relative;
@@ -652,20 +716,33 @@ body {
 }
 .b-page-hero.b-users {
   background-image: url("../images/home/top-banner.png");
-  background-size: 100% 100%;
+  background-size: 1920px 70%;
+  background-position: top center;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 768px;
 }
 .b-page-hero.b-users .b-content {
   position: absolute;
   left: 20%;
-  top: 50%;
+  top: 30%;
   background: transparent;
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+  transform: translate(-20%, -50%);
+  -moz-transform: translate(-20%, -50%);
+  -webkit-transform: translate(-20%, -50%);
+  -ms-transform: translate(-20%, -50%);
+  text-align: left;
+}
+.b-page-hero.b-users .b-content.b-en {
+  top: 40%;
+}
+.b-page-hero.b-users .b-content.b-en .b-text-title {
+  width: 330px;
+  font-size: 46px;
+  line-height: 76px;
+  word-wrap: break-word;
+}
+.b-page-hero.b-users .b-content.b-en .b-text-norm {
+  width: 50%;
 }
 .b-page-hero.b-users .b-content .b-text-title {
   font-family: "Samsung";
@@ -673,48 +750,66 @@ body {
 }
 .b-page-hero.b-users .b-content .b-text-norm {
   font-family: "roboto";
-  width: 60%;
-  margin: 0 auto;
+  width: 500px;
+  word-wrap: break-word;
 }
-.b-page-hero.b-users .b-btn-messeger {
+.b-page-hero.b-users .b-messeger {
   position: absolute;
   left: 20%;
-  top: 65%;
+  top: 45%;
   transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  width: 200px;
+  padding: 16px 20px 12px 20px;
   background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
   background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
   background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
   background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.b-page-hero.b-users .b-messeger.b-en {
+  top: 68%;
+  left: 15%;
+}
+.b-page-hero.b-users .b-messeger .b-btn-messeger {
   color: #fff;
   font-family: "Samsung";
   font-size: 18x;
-  padding: 16px 20px 12px 20px;
   border-radius: 40px;
   text-decoration: none;
-  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-  width: 200px;
-  text-align: center;
+  margin-left: 10px;
 }
-.b-page-hero.b-users .b-btn-messeger::before {
+.b-page-hero.b-users .b-messeger i {
   position: absolute;
-  font-family: "Font Awesome 5 Free";
-  content: "";
-  font-weight: 900;
-  font-size: 26px;
-  left: 20px;
-  top: 16px;
+  left: 30px;
+  top: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+.b-page-hero.b-users .b-ripple {
+  background-origin: center;
+  transition: background 1s;
+}
+.b-page-hero.b-users .b-ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.b-page-hero.b-users .b-ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }
 .b-page-hero.b-users .b-scroll-bottom .b-link {
   color: #888888;
 }
 .b-page-hero.b-users .b-images {
   position: absolute;
-  width: 40%;
-  left: 70%;
-  top: 70%;
+  width: 60%;
+  left: 60%;
+  top: 55%;
   transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -727,46 +822,27 @@ body {
   .b-page-hero.b-users .b-content {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     background: transparent;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    transform: translate(-30%, -50%);
+    -moz-transform: translate(-30%, -50%);
+    -webkit-transform: translate(-30%, -50%);
+    -ms-transform: translate(-30%, -50%);
+  }
+  .b-page-hero.b-users .b-content .b-text-norm {
+    width: 100%;
   }
   .b-page-hero.b-users .b-images {
     visibility: hidden;
   }
-  .b-page-hero.b-users .b-btn-messeger {
+  .b-page-hero.b-users .b-messeger {
     position: absolute;
-    left: 50%;
-    top: 75%;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-    background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-    background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-    background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-    color: #fff;
-    font-family: "Samsung";
-    font-size: 18x;
-    padding: 16px 20px 12px 20px;
-    border-radius: 40px;
-    text-decoration: none;
-    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-    width: 200px;
-    text-align: center;
-  }
-  .b-page-hero.b-users .b-btn-messeger::before {
-    position: absolute;
-    font-family: "Font Awesome 5 Free";
-    content: "";
-    font-weight: 900;
-    font-size: 26px;
-    left: 20px;
-    top: 16px;
+    left: 30%;
+    top: 45%;
+    transform: translate(10%, -50%);
+    -moz-transform: translate(10%, -50%);
+    -webkit-transform: translate(10%, -50%);
+    -ms-transform: translate(10%, -50%);
   }
 }
 .b-page-hero .b-content {
@@ -842,13 +918,13 @@ body {
 .b-page-hero .b-scroll-bottom {
   position: absolute;
   right: 10px;
-  top: 80%;
+  top: 60%;
   transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   animation-name: animationArrow;
-  animation-duration: 0.5s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
 .b-page-hero .b-scroll-bottom .b-link {
@@ -923,13 +999,13 @@ body {
 }
 .b-page-function .b-function {
   position: relative;
-  transform: translate(0%, 50%);
-  -moz-transform: translate(0%, 50%);
-  -webkit-transform: translate(0%, 50%);
-  -ms-transform: translate(0%, 50%);
+  transform: translate(0%, 100%);
+  -moz-transform: translate(0%, 100%);
+  -webkit-transform: translate(0%, 100%);
+  -ms-transform: translate(0%, 100%);
 }
 .b-page-function .b-function .b-content {
-  padding: 0 50px 0 50px;
+  padding: 0 40px 0 40px;
 }
 .b-page-function .b-function .b-content .b-text-function {
   color: #e74852;
@@ -1160,8 +1236,7 @@ body {
 
 .b-page-help {
   position: relative;
-  padding: 50px 0;
-  margin-top: 50px;
+  padding: 10px 0;
 }
 .b-page-help .b-heading .b-text-norm {
   font-family: "roboto";
@@ -1227,30 +1302,50 @@ body {
   font-size: 36px;
   margin-bottom: 30px;
 }
-.b-page-service .b-content .b-btn-messeger {
-  position: relative;
+.b-page-service .b-content .b-messeger {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, 80%);
+  -moz-transform: translate(-50%, 80%);
+  -webkit-transform: translate(-50%, 80%);
+  -ms-transform: translate(-50%, 80%);
+  width: 200px;
+  padding: 16px 20px 12px 20px;
   background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
   background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
   background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
   background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.b-page-service .b-content .b-messeger .b-btn-messeger {
   color: #fff;
   font-family: "Samsung";
   font-size: 18x;
-  padding: 20px 50px 16px 50px;
   border-radius: 40px;
   text-decoration: none;
-  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-  width: 250px;
-  text-align: center;
+  margin-left: 10px;
 }
-.b-page-service .b-content .b-btn-messeger::before {
+.b-page-service .b-content .b-messeger i {
   position: absolute;
-  font-family: "Font Awesome 5 Free";
-  content: "";
-  font-weight: 900;
-  font-size: 26px;
-  left: 20px;
-  top: 16px;
+  left: 30px;
+  top: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+.b-page-service .b-content .b-ripple {
+  background-origin: center;
+  transition: background 1s;
+}
+.b-page-service .b-content .b-ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.b-page-service .b-content .b-ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }
 @media screen and (max-width: 992px) {
   .b-page-service {
@@ -1259,6 +1354,7 @@ body {
 }
 
 .b-page-business {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   background-image: url("../images/home/bottom-banner.png");
@@ -1266,6 +1362,7 @@ body {
   background-size: 100% 100%;
   background-position: center;
   height: auto;
+  width: 100%;
 }
 .b-page-business .b-images {
   margin-top: 50px;
@@ -1275,51 +1372,42 @@ body {
   position: relative;
   margin-top: 50px;
   width: 50%;
+  text-align: left;
 }
-.b-page-business .b-content .b-text-title {
+.b-page-business .b-content .b-info {
   position: absolute;
-  left: 50%;
+  left: 30%;
   top: 50%;
   transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+.b-page-business .b-content .b-info .b-text-title {
   color: #fff;
   font-family: "Samsung";
   font-size: 26px;
-  text-align: center;
 }
-.b-page-business .b-content .b-text-norm {
-  position: absolute;
-  left: 50%;
-  top: 65%;
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: #fff;
+.b-page-business .b-content .b-info .b-text-norm {
+  color: rgba(255, 255, 255, 0.7);
   font-family: "roboto";
   font-size: 16px;
-  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  max-width: 260px;
+  word-wrap: break-word;
 }
-.b-page-business .b-content .b-link {
-  position: absolute;
-  left: 50%;
-  top: 85%;
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+.b-page-business .b-content .b-info .b-link {
   width: 250px;
   border: 0.5px solid #fff;
-  padding: 12px 0 10px 0;
+  padding: 20px 20px 16px 20px;
   border-radius: 50px;
   text-align: center;
   text-decoration: none;
   color: #fff;
   font-family: "Samsung";
 }
-.b-page-business .b-content .b-link::after {
+.b-page-business .b-content .b-info .b-link::after {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
@@ -1559,6 +1647,8 @@ body {
 
 .b-page-footer {
   position: relative;
+  padding: 20px 0;
+  border-top: 1px solid #fff;
 }
 .b-page-footer.b-footer-main {
   background-color: #e74852;
@@ -1568,7 +1658,7 @@ body {
   text-align: right;
 }
 .b-page-footer .b-logo img {
-  width: 60px;
+  width: 50px;
 }
 .b-page-footer .b-logo img::selection {
   background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
@@ -1585,7 +1675,7 @@ body {
 .b-page-footer .b-content-footer .b-text-norm {
   color: rgba(255, 255, 255, 0.7);
   font-family: "roboto";
-  font-size: 14px;
+  font-size: 12px;
 }
 .b-page-footer .b-content-footer .b-text-norm::selection {
   background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
@@ -1596,18 +1686,19 @@ body {
   }
 }
 .b-page-footer .b-page-nav {
-  text-align: left;
+  text-align: right;
 }
 .b-page-footer .b-page-nav .b-list-item .b-item {
+  cursor: pointer;
   margin-top: 20px;
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
 }
 .b-page-footer .b-page-nav .b-list-item .b-item .b-link {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-  font-family: "Samsung";
+  color: #fff;
+  font-size: 12px;
+  font-family: "roboto";
 }
 .b-page-footer .b-page-nav .b-list-item .b-item .b-link::selection {
   background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
@@ -1619,6 +1710,7 @@ body {
   margin-top: 20px;
 }
 .b-page-footer .b-page-nav .b-list-social .b-item {
+  cursor: pointer;
   position: relative;
   display: inline-block;
   width: 30px;

@@ -36,10 +36,10 @@ img {
 }
 @keyframes animationArrow {
   0% {
-    top: 80%;
+    top: 60%;
   }
   100% {
-    top: 83%;
+    top: 63%;
   }
 }
 ::-moz-selection {
@@ -60,6 +60,7 @@ body {
   background-image: url("../images/home/background-top.png");
   z-index: 1;
 }
+
 .b-index {
   position: fixed;
   width: 100%;
@@ -90,6 +91,22 @@ body {
       }
       .b-content {
         padding: 0 70px 0 0;
+        width: 70%;
+        margin: 0 auto;
+        &.b-en {
+          width: 100%;
+          text-align: center;
+          .b-text-title {
+            width: 100%;
+            word-wrap: break-word;
+          }
+          .b-text-norm {
+            width: 80%;
+            word-wrap: break-word;
+            margin: 0 auto;
+            margin-bottom: 30px;
+          }
+        }
         .b-text-title {
           color: $white;
           font-family: "Samsung";
@@ -108,8 +125,22 @@ body {
           border-radius: 50px;
           color: $black;
           text-decoration: none;
+          transition: background-image 1s ease-out;
+        }
+        .b-ripple {
+          background-origin: center;
+          transition: background 0.8s;
+          &:hover {
+            background: #fff radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+          }
+          &:active {
+            background-color: #6eb9f7;
+            background-size: 100%;
+            transition: background 0s;
+          }
         }
       }
+
       > .b-images {
         position: relative;
         width: 100%;
@@ -146,13 +177,24 @@ body {
       .b-content {
         text-align: center;
         padding: 0 0px 0 0px;
+        width: 60%;
+        margin: 0 auto;
+        &.b-en {
+          .b-text-title {
+            height: 80px;
+          }
+          .b-text-norm {
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+          }
+        }
         .b-text-title {
           color: $white;
           font-family: "Samsung";
           font-size: 36px;
         }
         .b-text-norm {
-          margin-top: 20px;
           color: $white;
           font-family: "roboto";
           margin-bottom: 30px;
@@ -164,6 +206,18 @@ body {
           border-radius: 50px;
           color: $black;
           text-decoration: none;
+        }
+        .b-ripple {
+          background-origin: center;
+          transition: background 0.8s;
+          &:hover {
+            background: #fff radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+          }
+          &:active {
+            background-color: #6eb9f7;
+            background-size: 100%;
+            transition: background 0s;
+          }
         }
       }
       > .b-images {
@@ -188,6 +242,9 @@ body {
       }
     }
   }
+  .b-page-footer {
+    border-top: none;
+  }
 }
 .b-page-hero {
   position: relative;
@@ -201,52 +258,84 @@ body {
   }
   &.b-users {
     background-image: url("../images/home/top-banner.png");
-    background-size: 100% 100%;
+    background-size: 1920px 70%;
+    background-position: top center;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 768px;
     .b-content {
       position: absolute;
       left: 20%;
-      top: 50%;
+      top: 30%;
       background: transparent;
-      @include tranform(translate(-50%, -50%));
-      text-align: center;
+      @include tranform(translate(-20%, -50%));
+      text-align: left;
+      &.b-en {
+        top: 40%;
+        .b-text-title {
+          width: 330px;
+          font-size: 46px;
+          line-height: 76px;
+          word-wrap: break-word;
+        }
+        .b-text-norm{
+          width: 50%;
+        }
+      }
       .b-text-title {
         font-family: "Samsung";
         font-size: 36px;
       }
       .b-text-norm {
         font-family: "roboto";
-        width: 60%;
-        margin: 0 auto;
+        width: 500px;
+        word-wrap: break-word;
       }
     }
-    .b-btn-messeger {
+    .b-messeger {
       position: absolute;
       left: 20%;
-      top: 65%;
+      top: 45%;
       @include tranform(translate(-50%, -50%));
+      width: 200px;
+      padding: 16px 20px 12px 20px;
       background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
       background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
       background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
       background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-      color: $white;
-      font-family: "Samsung";
-      font-size: 18x;
-      padding: 16px 20px 12px 20px;
-      border-radius: 40px;
-      text-decoration: none;
-      box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-      width: 200px;
+      border-radius: 50px;
       text-align: center;
-      &::before {
+      cursor: pointer;
+      &.b-en {
+        top: 68%;
+        left: 15%;
+      }
+      .b-btn-messeger {
+        color: $white;
+        font-family: "Samsung";
+        font-size: 18x;
+        border-radius: 40px;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      i {
         position: absolute;
-        font-family: "Font Awesome 5 Free";
-        content: "\f7cd";
-        font-weight: 900;
-        font-size: 26px;
-        left: 20px;
-        top: 16px;
+        left: 30px;
+        top: 10px;
+        font-size: 30px;
+        color: $white;
+      }
+    }
+    .b-ripple {
+      background-origin: center;
+      transition: background 1s;
+      &:hover {
+        background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+      }
+      &:active {
+        background-color: #6eb9f7;
+        background-size: 100%;
+        transition: background 0s;
       }
     }
     .b-scroll-bottom {
@@ -256,9 +345,9 @@ body {
     }
     .b-images {
       position: absolute;
-      width: 40%;
-      left: 70%;
-      top: 70%;
+      width: 60%;
+      left: 60%;
+      top: 55%;
       @include tranform(translate(-50%, -50%));
       img {
         width: 100%;
@@ -268,40 +357,21 @@ body {
       .b-content {
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 30%;
         background: transparent;
-        @include tranform(translate(-50%, -50%));
+        @include tranform(translate(-30%, -50%));
+        .b-text-norm {
+          width: 100%;
+        }
       }
       .b-images {
         visibility: hidden;
       }
-      .b-btn-messeger {
+      .b-messeger {
         position: absolute;
-        left: 50%;
-        top: 75%;
-        @include tranform(translate(-50%, -50%));
-        background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-        background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-        background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-        background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-        color: $white;
-        font-family: "Samsung";
-        font-size: 18x;
-        padding: 16px 20px 12px 20px;
-        border-radius: 40px;
-        text-decoration: none;
-        box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-        width: 200px;
-        text-align: center;
-        &::before {
-          position: absolute;
-          font-family: "Font Awesome 5 Free";
-          content: "\f7cd";
-          font-weight: 900;
-          font-size: 26px;
-          left: 20px;
-          top: 16px;
-        }
+        left: 30%;
+        top: 45%;
+        @include tranform(translate(10%, -50%));
       }
     }
   }
@@ -364,10 +434,10 @@ body {
   .b-scroll-bottom {
     position: absolute;
     right: 10px;
-    top: 80%;
+    top: 60%;
     @include tranform(rotate(-90deg));
     animation-name: animationArrow;
-    animation-duration: 0.5s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     .b-link {
       position: relative;
@@ -448,10 +518,10 @@ body {
   position: relative;
   .b-function {
     position: relative;
-    @include tranform(translate(0%, 50%));
+    @include tranform(translate(0%, 100%));
     .b-content {
       // width: 80%;
-      padding: 0 50px 0 50px;
+      padding: 0 40px 0 40px;
       .b-text-function {
         color: #e74852;
         font-family: "Samsung";
@@ -657,8 +727,7 @@ body {
 }
 .b-page-help {
   position: relative;
-  padding: 50px 0;
-  margin-top: 50px;
+  padding: 10px 0;
   .b-heading {
     .b-text-norm {
       font-family: "roboto";
@@ -720,29 +789,48 @@ body {
       font-size: 36px;
       margin-bottom: 30px;
     }
-    .b-btn-messeger {
-      position: relative;
+    .b-messeger {
+      position: absolute;
+      left: 50%;
+      top: 65%;
+      @include tranform(translate(-50%, 80%));
+      width: 200px;
+      padding: 16px 20px 12px 20px;
       background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
       background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
       background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
       background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-      color: $white;
-      font-family: "Samsung";
-      font-size: 18x;
-      padding: 20px 50px 16px 50px;
-      border-radius: 40px;
-      text-decoration: none;
-      box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-      width: 250px;
+      border-radius: 50px;
       text-align: center;
-      &::before {
+      cursor: pointer;
+
+      .b-btn-messeger {
+        color: $white;
+        font-family: "Samsung";
+        font-size: 18x;
+        border-radius: 40px;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      i {
         position: absolute;
-        font-family: "Font Awesome 5 Free";
-        content: "\f7cd";
-        font-weight: 900;
-        font-size: 26px;
-        left: 20px;
-        top: 16px;
+        left: 30px;
+        top: 10px;
+        font-size: 30px;
+        color: $white;
+      }
+    }
+    .b-ripple {
+      background-origin: center;
+      transition: background 1s;
+      &:hover {
+        background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+      }
+      &:active {
+        background-color: #6eb9f7;
+        background-size: 100%;
+        transition: background 0s;
       }
     }
   }
@@ -751,6 +839,7 @@ body {
   }
 }
 .b-page-business {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   background-image: url("../images/home/bottom-banner.png");
@@ -758,6 +847,7 @@ body {
   background-size: 100% 100%;
   background-position: center;
   height: auto;
+  width: 100%;
   .b-images {
     margin-top: 50px;
     width: 50%;
@@ -766,45 +856,42 @@ body {
     position: relative;
     margin-top: 50px;
     width: 50%;
-    .b-text-title {
+    text-align: left;
+    .b-info {
       position: absolute;
-      left: 50%;
+      left: 30%;
       top: 50%;
       @include tranform(translate(-50%, -50%));
-      color: $white;
-      font-family: "Samsung";
-      font-size: 26px;
-      text-align: center;
-    }
-    .b-text-norm {
-      position: absolute;
-      left: 50%;
-      top: 65%;
-      @include tranform(translate(-50%, -50%));
-      color: $white;
-      font-family: "roboto";
-      font-size: 16px;
-      text-align: center;
-    }
-    .b-link {
-      position: absolute;
-      left: 50%;
-      top: 85%;
-      @include tranform(translate(-50%, -50%));
-      width: 250px;
-      border: 0.5px solid $white;
-      padding: 12px 0 10px 0;
-      border-radius: 50px;
-      text-align: center;
-      text-decoration: none;
-      color: $white;
-      font-family: "Samsung";
-      &::after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f061";
-        font-weight: 900;
-        font-size: 20px;
-        padding: 10px;
+      .b-text-title {
+        color: $white;
+        font-family: "Samsung";
+        font-size: 26px;
+      }
+      .b-text-norm {
+        color: $color_white;
+        font-family: "roboto";
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        max-width: 260px;
+        word-wrap: break-word;
+      }
+      .b-link {
+        width: 250px;
+        border: 0.5px solid $white;
+        padding: 20px 20px 16px 20px;
+        border-radius: 50px;
+        text-align: center;
+        text-decoration: none;
+        color: $white;
+        font-family: "Samsung";
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          content: "\f061";
+          font-weight: 900;
+          font-size: 20px;
+          padding: 10px;
+        }
       }
     }
   }
@@ -986,7 +1073,7 @@ body {
           padding: 15px 10px;
           color: #888888;
           outline: 0;
-          &:hover{
+          &:hover {
             box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
           }
         }

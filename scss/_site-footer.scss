@@ -1,5 +1,7 @@
 .b-page-footer {
   position: relative;
+  padding: 20px 0;
+  border-top: 1px solid $white;
   &.b-footer-main {
     background-color: #e74852;
   }
@@ -7,7 +9,7 @@
     position: relative;
     text-align: right;
     img {
-      width: 60px;
+      width: 50px;
       &::selection {
         background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
       }
@@ -22,7 +24,7 @@
     .b-text-norm {
       color: $color_white;
       font-family: "roboto";
-      font-size: 14px;
+      font-size: 12px;
       &::selection {
         background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
       }
@@ -32,17 +34,18 @@
     }
   }
   .b-page-nav {
-    text-align: left;
+    text-align: right;
     .b-list-item {
       .b-item {
+        cursor: pointer;
         margin-top: 20px;
         display: inline-block;
         padding-left: 10px;
         padding-right: 10px;
         .b-link {
-          color: $color_white;
-          font-size: 14px;
-          font-family: "Samsung";
+          color: $white;
+          font-size: 12px;
+          font-family: "roboto";
           &::selection {
             background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
           }
@@ -55,6 +58,8 @@
     .b-list-social {
       margin-top: 20px;
       .b-item {
+        cursor: pointer;
+
         position: relative;
         display: inline-block;
         width: 30px;

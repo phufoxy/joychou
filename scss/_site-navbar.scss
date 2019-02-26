@@ -98,6 +98,7 @@ $color_white: rgba(255, 255, 255, 0.7);
     @include transition(all 0.3s ease-in-out);
   }
   .b-logo {
+    text-align: left;
     img {
       width: 60px;
       &::selection {
@@ -117,13 +118,14 @@ $color_white: rgba(255, 255, 255, 0.7);
     }
     .b-item {
       display: inline-block;
-      padding-left: 8px;
-      padding-right: 8px;
+      padding-left: 10px;
+      padding-right: 10px;
       margin-top: 25px;
       .b-link {
         font-family: "Samsung";
         color: $color_white;
         font-size: 14px;
+        text-transform: uppercase;
         &::selection {
           background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
         }
@@ -145,7 +147,7 @@ $color_white: rgba(255, 255, 255, 0.7);
         color: $color_white;
         text-decoration: none;
         font-family: "Samsung";
-        font-size: 14px;
+        font-size: 12px;
         &::selection {
           background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
         }
@@ -155,14 +157,21 @@ $color_white: rgba(255, 255, 255, 0.7);
       }
     }
     .b-item {
-      display: inline;
+      display: inline-block;
       padding-left: 20px;
       padding-right: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      min-width: 130px;
+      text-align: center;
+      margin-top: -5px;
+      cursor: pointer;
       &.is-active {
         border: 1.2px solid $white;
         border-radius: 5px;
+        &:hover {
+          box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+        }
       }
       .b-link {
         color: $color_white;

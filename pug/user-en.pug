@@ -23,7 +23,7 @@ html(lang='en')
                                 .b-open-menu.d-lg-none
                                     a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
                                 ul.b-list-item.js-clone-nav.d-lg-block
-                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    -var listItem = [{item:'USER',link:'user.html'},{item:'BUSINESS',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
                                     each itemList in listItem
                                         li.b-item
                                             -var get = itemList.link
@@ -31,18 +31,18 @@ html(lang='en')
                         .col-lg-5
                             .b-login.js-clone-lang.d-lg-block.d-none
                                 .b-item-lang
-                                    a(href="user-en.html").b-link ENGLISH
+                                    a(href="user.html").b-link VIETNAMESE
                                 .b-item
-                                    a(href="signin.html").b-link ĐĂNG NHẬP
+                                    a(href="signin.html").b-link SIGN IN
                                 .b-item.is-active
-                                    a(href="#").b-link Đăng ký miễn phí
+                                    a(href="#").b-link Sign up
             section.b-page-hero.b-users
                 .container
-                    .b-content
-                        h3.b-text-title.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s") Trợ lý Ảo đột phá
-                        p.b-text-norm.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")   Người trợ lý với lời khuyên ẩm thực chất lừ cho bạn. Inbox ngay Gonhhoy trên Facebook Messager
+                    .b-content.b-en
+                        h3.b-text-title.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s") Revolutionary Artificial Intelligent Assitant
+                        p.b-text-norm.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")   our friendly virtual dining assitant. Find right dining place in the right time. Inbox "Gonjoy" on Facebook Messenger
                         
-                    .b-messeger.b-ripple
+                    .b-messeger.b-ripple.b-en
                         a(href="#").b-btn-messeger Messager
                         i.fab.fa-facebook-messenger
                     .b-images
@@ -54,10 +54,10 @@ html(lang='en')
                     .row
                         .col-lg-8.offset-lg-2
                             .b-heading.text-center
-                                p.b-text-norm NỔI BẬT CỦA JOY
-                                h3.b-text-title Joy giúp gì cho bạn ?
+                                p.b-text-norm OUTSTANDING FEARTURES
+                                h3.b-text-title How Joy can help you?
                     div.b-card.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
-                        -var listItem = [{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'TÌm Đúng Địa Điểm'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Đề xuất món ăn'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Tiết kiệm thời gian'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Tiết Kiệm Chi Phí'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Tìm Theo Cảm Xúc'},{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'TÌm Đúng Địa Điểm'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Đề xuất món ăn'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Tiết kiệm thời gian'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Tiết Kiệm Chi Phí'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Tìm Theo Cảm Xúc'}]
+                        -var listItem = [{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'Correctly searching'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Smart recommendation'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Save time'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Save money'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Take care your emotion'},{scr:'./images/home/Dung_Joy_Gop_Y.svg',title:'Feedback'},{scr:'./images/home/Chia_Se_Ban_Be.svg',title:'Share with your friend'},{scr:'./images/home/Goi_Mon_Qua_Joy.svg',title:'Reservation Booking'},{scr:'./images/home/Nhan_Khuyen_Mai.svg',title:'Promotion'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Online order supporter'}]
                         each item in listItem
                             .b-card-item
                                 .b-icon
@@ -74,7 +74,7 @@ html(lang='en')
                         .col-lg-5
                             .b-function
                                 .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title Gợi Ý Sức Khỏe
+                                    h3.b-text-title HEALTHY RECOMMENDATION
                                     p.b-text-norm
                                         :verbatim
                                             orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -85,7 +85,7 @@ html(lang='en')
                         .col-lg-5
                             .b-function
                                 .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title Chơi game góp ý
+                                    h3.b-text-title GAMING FEEDBACK
                                     p.b-text-norm
                                         :verbatim
                                             orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -102,7 +102,7 @@ html(lang='en')
                         .col-lg-5
                             .b-function
                                 .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title Hệ thống phân tích ngôn ngữ
+                                    h3.b-text-title NATURAL LANGUAGE  PROCESSING ALGORITHM
                                     p.b-text-norm
                                         :verbatim
                                             orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -114,7 +114,7 @@ html(lang='en')
                         .col-lg-5
                             .b-function
                                 .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title Cá Nhân hóa
+                                    h3.b-text-title PERSONALIZATION
                                     p.b-text-norm
                                         :verbatim
                                             orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -150,7 +150,7 @@ html(lang='en')
                                             p.b-text-norm Truy cập dữ liệu hoạt động của nhân viên
             section.b-page-service
                 .b-content
-                    h3.b-text-title.wow.fadeInUp(data-wow-delay="1s",data-wow-duration="1s") Hãy để joy phục vụ bạn ngay bây giờ !
+                    h3.b-text-title.wow.fadeInUp(data-wow-delay="1s",data-wow-duration="1s") PLEASE LET Joy SERVE YOU NOW
                     .b-messeger.b-ripple
                         a(href="#").b-btn-messeger Messager
                         i.fab.fa-facebook-messenger
@@ -159,9 +159,9 @@ html(lang='en')
                     img(src="./images/home/bottom-banner-item.png", alt="Banner", style="width:100%")
                 .b-content
                     .b-info
-                        h3.b-text-title Joy và Doanh nghiệp
-                        p.b-text-norm Kết nối khách hàng của bạn 24/7 Hổ trợ việc kinh doanh của bạn 24/7
-                        a(href="#").b-link Khám phá các lợi ích
+                        h3.b-text-title Joy and Your Business
+                        p.b-text-norm Connect your customer 24/7.Support your business 24/7.
+                        a(href="#").b-link Benefit Discovery
             footer.b-page-footer.b-footer-main
                 .container
                     .row

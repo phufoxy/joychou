@@ -23,7 +23,7 @@ html(lang='en')
                                 .b-open-menu.d-lg-none
                                     a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
                                 ul.b-list-item.js-clone-nav.d-lg-block
-                                                -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                                -var listItem = [{item:'User',link:'user.html'},{item:'BUSINESS',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
                                                 each itemList in listItem
                                                     li.b-item
                                                         -var get = itemList.link
@@ -31,31 +31,33 @@ html(lang='en')
                         .col-lg-5
                             .b-login.js-clone-lang.d-lg-block.d-none
                                 .b-item-lang
-                                    a(href="index-en.html").b-link ENGLISH
+                                    a(href="index.html").b-link VIETNAMESE
                                 .b-item
-                                    a(href="signin.html").b-link ĐĂNG NHẬP
+                                    a(href="signin.html").b-link SIGN IN
                                 .b-item.is-active
-                                    a(href="#").b-link Đăng ký miễn phí
+                                    a(href="#").b-link SIGN UP
             section.b-page-intro
                 .container-fluid
                     .row
                         .col-lg-6
                             .b-overate.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                .b-content
-                                    h3.b-text-title Trợ lý Ảo đột phá
+                                .b-content.b-en
+                                    h3.b-text-title
+                                        :verbatim
+                                            Revolutionary Artificial Intelligent Assitant
                                     p.b-text-norm 
                                         :verbatim
-                                            Người trở lý với lời khuyên ẩm thực chất lừ cho bán. Indox ngày Gomjou trên Facenook Messenger.
-                                    a(href="#").b-link.b-ripple TÌM HIỂU NGAY
+                                            Your friendly virtual dining assitant. Find right dining place in the right time. Inbox "Gonjoy" on Facebook Messenger
+                                    a(href="#").b-link.b-ripple FIND OUT
                         .col-lg-6
                             .b-enterprise.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                .b-content
-                                    h3.b-text-title Joy và Doanh Nghiệp
+                                .b-content.b-en
+                                    h3.b-text-title Joy and Business
                                     p.b-text-norm 
                                         :verbatim
-                                            Kết nối khách hàng của bản 24/7
-                                            Hổ trọ việc kinh doanh của bán 24/7
-                                    a(href="#").b-link.b-ripple TÌM HIỂ NGAY
+                                            Connect your customer 24/7.
+                                            Support your business 24/7.
+                                    a(href="#").b-link.b-ripple FIND OUT
             include footer/_site-footer
         script(src="https://code.jquery.com/jquery-2.2.0.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")

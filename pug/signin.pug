@@ -14,13 +14,13 @@ html(lang='en')
                         .col-lg-7.col-md-12
                             .b-singin
                                 h3.b-text-title Bạn chưa có tài khoản ?
-                                a(href="#").b-btn-singup Đăng ký miễn phí
+                                a(href="singup.html").b-btn-singup Đăng ký miễn phí
                             .b-lang
                                 a(href="#").b-link English
             section.b-page-singin
-                            .b-singin
+                            .b-singin.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                                 .b-content
-                                    form(action="").b-form.wow.fadeInDown(data-wow-delay=".5s",data-wow-duration="1s")
+                                    form(action="").b-form
                                         h3.b-text-title Đăng nhập
                                         .b-form-group
                                             input(type="text", placeholder="Tài Khoản")
@@ -31,12 +31,12 @@ html(lang='en')
                                     a(href="#").b-link Quên mật khẩu ?
                             .b-intro
                                     .b-content
-                                        h3.b-text-title.wow.fadeInDown(data-wow-delay=".5s",data-wow-duration="1s") Kết nối với khách hàng của bạn
-                                        p.b-text-norm.wow.fadeInDown(data-wow-delay=".5s",data-wow-duration="1s")
+                                        h3.b-text-title.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s") Kết nối với khách hàng của bạn
+                                        p.b-text-norm.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                                             :verbatim
                                                 Kết nối khách hàng của bạn 24/7.
                                                 Hỗ trợ việc kinh doanh của bạn 24/7
-                                    .b-images.b-form.wow.fadeInUp(data-wow-delay=".5s",data-wow-duration="1s")
+                                    .b-images.b-form.wow.fadeInUp(data-wow-delay="1s",data-wow-duration="1s")
                                         img(src="./images/form/Background.png", alt="BG")
         script(src="https://code.jquery.com/jquery-2.2.0.min.js")
         script(src="./js/wow.js")
