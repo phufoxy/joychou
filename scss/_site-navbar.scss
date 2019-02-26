@@ -17,10 +17,72 @@ $color_white: rgba(255, 255, 255, 0.7);
   -webkit-transition: $para;
   -ms-transition: $para;
 }
+
 .b-page-header {
   position: relative;
   padding: 10px 0;
   @include transition(all 0.3s ease-in-out);
+  &.b-singin {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    z-index: 9999;
+    .b-singin {
+      position: relative;
+      text-align: right;
+      @include tranform(translate(0, 30px));
+      .b-text-title {
+        display: inline;
+        font-family: "Samsung";
+        font-size: 16px;
+        color: $color_white;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .b-btn-singup {
+        border: 1px solid $color_white;
+        padding: 12px 20px 10px 20px;
+        border-radius: 5px;
+        color: $color_white;
+        font-family: "Samsung";
+        text-decoration: none;
+        &:hover {
+          color: $white;
+          box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+    .b-lang {
+      .b-link {
+        position: absolute;
+        top: -5px;
+        right: 20px;
+        color: $color_white;
+        text-decoration: none;
+        font-family: "Samsung";
+        font-size: 14px;
+      }
+    }
+    @media screen and(max-width:992px) {
+      background-color: #ed2839;
+      .b-singin {
+        position: relative;
+        text-align: right;
+        @include tranform(translate(0, -40px));
+      }
+    }
+    @media screen and(max-width:768px) {
+      .b-lang {
+        display: none;
+      }
+      .b-singin {
+        .b-text-title {
+          display: none;
+        }
+      }
+    }
+  }
   &.b-bussiness {
     position: absolute;
     width: 100%;

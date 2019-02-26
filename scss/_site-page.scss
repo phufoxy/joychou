@@ -923,3 +923,104 @@ body {
     }
   }
 }
+.b-page-singin {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+  .b-intro {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    background-color: rgba(107, 116, 134, 1);
+    z-index: 1;
+    .b-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      @include tranform(translate(-50%, -50%));
+      text-align: center;
+      .b-text-title {
+        font-family: "Samsung";
+        font-size: 36px;
+        color: $color_white;
+      }
+      .b-text-norm {
+        font-family: "roboto";
+        font-size: 16px;
+        color: $color_white;
+      }
+    }
+    .b-images {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .b-singin {
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 40%;
+    left: 0;
+    background-color: $white;
+    .b-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      @include tranform(translate(-50%, -50%));
+      text-align: center;
+      .b-text-title {
+        font-size: 26px;
+        font-family: "Samsung";
+        color: $black;
+      }
+      .b-form-group {
+        margin-top: 20px;
+        input {
+          width: 70%;
+          border: 1px solid #888888;
+          padding: 15px 10px;
+          color: #888888;
+          outline: 0;
+          &:hover{
+            box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+          }
+        }
+        input[type="submit"] {
+          width: 30%;
+          border: 0.1px solid #888888;
+          padding: 12px 10px 10px 10px;
+          color: $white;
+          border-radius: 50px;
+          background-color: #e74852;
+          font-family: "roboto";
+          cursor: pointer;
+          margin-bottom: 10px;
+        }
+      }
+      .b-link {
+        color: #888888;
+        text-decoration: none;
+        font-family: "roboto";
+        &:hover {
+          color: #e74852;
+          box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+  @media screen and(max-width:992px) {
+    .b-intro {
+      display: none;
+    }
+    .b-singin {
+      position: relative;
+      width: 100%;
+      height: 800px;
+    }
+  }
+}

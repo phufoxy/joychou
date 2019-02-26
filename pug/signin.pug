@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+    include head/_site-head
+    body
+        include loader/_site-loader
+        .b-wrapper
+            header.b-page-header.b-singin#b-page-header
+                .container-fluid
+                    .row
+                        .col-lg-5.col-md-12
+                            .b-logo
+                                a(href="#").b-link
+                                    img(src="./images/partial/logo.png", alt="Logo")
+                        .col-lg-7.col-md-12
+                            .b-singin
+                                h3.b-text-title Bạn chưa có tài khoản ?
+                                a(href="#").b-btn-singup Đăng ký miễn phí
+                            .b-lang
+                                a(href="#").b-link English
+            section.b-page-singin
+                            .b-singin
+                                .b-content
+                                    form(action="").b-form.wow.fadeInDown(data-wow-delay=".5s",data-wow-duration="1s")
+                                        h3.b-text-title Đăng nhập
+                                        .b-form-group
+                                            input(type="text", placeholder="Tài Khoản")
+                                        .b-form-group
+                                            input(type="text", placeholder="Tài Khoản")
+                                        .b-form-group
+                                            input(type="submit", value="Đăng Nhập")
+                                    a(href="#").b-link Quên mật khẩu ?
+                            .b-intro
+                                    .b-content
+                                        h3.b-text-title.wow.fadeInDown(data-wow-delay=".5s",data-wow-duration="1s") Kết nối với khách hàng của bạn
+                                        p.b-text-norm.wow.fadeInDown(data-wow-delay=".5s",data-wow-duration="1s")
+                                            :verbatim
+                                                Kết nối khách hàng của bạn 24/7.
+                                                Hỗ trợ việc kinh doanh của bạn 24/7
+                                    .b-images.b-form.wow.fadeInUp(data-wow-delay=".5s",data-wow-duration="1s")
+                                        img(src="./images/form/Background.png", alt="BG")
+        script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+        script(src="./js/wow.js")
+        script(src="./js/main.js")
