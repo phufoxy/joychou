@@ -16,14 +16,14 @@ html(lang='en')
                     .row
                         .col-lg-1
                             .b-logo
-                                a(href="index.html").b-link
+                                a(href="index-en.html").b-link
                                     img(src="./images/partial/logo.png", alt="Logo")
                         .col-lg-6
                             nav.b-page-nav
                                 .b-open-menu.d-lg-none
                                     a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
                                 ul.b-list-item.js-clone-nav.d-lg-block
-                                    -var listItem = [{item:'USER',link:'user.html'},{item:'BUSINESS',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
                                     each itemList in listItem
                                         li.b-item
                                             -var get = itemList.link
@@ -31,18 +31,18 @@ html(lang='en')
                         .col-lg-5
                             .b-login.js-clone-lang.d-lg-block.d-none
                                 .b-item-lang
-                                    a(href="user.html").b-link VIETNAMESE
+                                    a(href="user-en.html").b-link VIETNAMESE
                                 .b-item
-                                    a(href="signin.html").b-link SIGN IN
+                                    a(href="signin-en.html").b-link SIGN IN
                                 .b-item.is-active
-                                    a(href="#").b-link Sign up
-            section.b-page-hero.b-users
+                                    a(href="signup-en.html").b-link Sign up
+            section.b-page-hero.b-users.b-en
                 .container
-                    .b-content.b-en
+                    .b-content
                         h3.b-text-title.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s") Revolutionary Artificial Intelligent Assitant
-                        p.b-text-norm.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")   our friendly virtual dining assitant. Find right dining place in the right time. Inbox "Gonjoy" on Facebook Messenger
+                        p.b-text-norm.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")   Your friendly virtual dining assitant. Find right dining place in the right time. Inbox "Gonjoy" on Facebook Messenger
                         
-                    .b-messeger.b-ripple.b-en
+                    .b-messeger.b-ripple
                         a(href="#").b-btn-messeger Messager
                         i.fab.fa-facebook-messenger
                     .b-images
@@ -55,9 +55,9 @@ html(lang='en')
                         .col-lg-8.offset-lg-2
                             .b-heading.text-center
                                 p.b-text-norm OUTSTANDING FEARTURES
-                                h3.b-text-title How Joy can help you?
+                                h3.b-text-title #[span.b-current Joy] How Joy can help you?
                     div.b-card.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
-                        -var listItem = [{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'Correctly searching'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Smart recommendation'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Save time'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Save money'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Take care your emotion'},{scr:'./images/home/Dung_Joy_Gop_Y.svg',title:'Feedback'},{scr:'./images/home/Chia_Se_Ban_Be.svg',title:'Share with your friend'},{scr:'./images/home/Goi_Mon_Qua_Joy.svg',title:'Reservation Booking'},{scr:'./images/home/Nhan_Khuyen_Mai.svg',title:'Promotion'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Online order supporter'}]
+                        -var listItem = [{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'Correctly searching'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Smart recommendation'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Save time'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Save money'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Take care your emotion'},{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'Feedback'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Share with your friend'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Reservation Booking'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Promotion'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Online order supporter'}]
                         each item in listItem
                             .b-card-item
                                 .b-icon
@@ -68,10 +68,10 @@ html(lang='en')
             section.b-page-function#function
                 .container-fluid
                     .row
-                        .col-lg-7
+                        .col-lg-6
                             .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/home/block-1.png", alt="Table",style="width:100%")
-                        .col-lg-5
+                                img(src="./images/home/block-1.png", alt="Table")
+                        .col-lg-6
                             .b-function
                                 .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
                                     h3.b-text-title HEALTHY RECOMMENDATION
@@ -82,7 +82,7 @@ html(lang='en')
                                             sit amet. Aliquam faucibus est lectus, nec malesuada sem 
                                     
                     .row
-                        .col-lg-5
+                        .col-lg-6
                             .b-function
                                 .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
                                     h3.b-text-title GAMING FEEDBACK
@@ -92,17 +92,17 @@ html(lang='en')
                                             Pellentesque eleifend tempus lorem, a auctor eros pretium 
                                             sit amet. Aliquam faucibus est lectus, nec malesuada sem 
                                             elementum in.
-                        .col-lg-7
+                        .col-lg-6
                             .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/home/block-2.png", alt="Table",style="width:100%")
+                                img(src="./images/home/block-2.png", alt="Table")
                     .row
-                        .col-lg-7
+                        .col-lg-6
                             .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/home/block-3.png", alt="Table",style="width:100%")
-                        .col-lg-5
+                                img(src="./images/home/block-3.png", alt="Table")
+                        .col-lg-6
                             .b-function
                                 .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title NATURAL LANGUAGE  PROCESSING ALGORITHM
+                                    h3.b-text-title NATURAL LANGUAGE PROCESSING ALGORITHM
                                     p.b-text-norm
                                         :verbatim
                                             orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -111,7 +111,7 @@ html(lang='en')
                                             elementum in.
                                   
                     .row
-                        .col-lg-5
+                        .col-lg-6
                             .b-function
                                 .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
                                     h3.b-text-title PERSONALIZATION
@@ -121,36 +121,13 @@ html(lang='en')
                                             Pellentesque eleifend tempus lorem, a auctor eros pretium 
                                             sit amet. Aliquam faucibus est lectus, nec malesuada sem 
                                             elementum in.
-                        .col-lg-7
+                        .col-lg-6
                             .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/home/block-4.png", alt="Table",style="width:100%")
-                    .row
-                        .col-lg-7
-                            .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/business/block-5.png", alt="Table",style="width:100%")
-                        .col-lg-5
-                            .b-function
-                                .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Quản lý nhân viên
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                                    .b-list-function
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Phân quyền nhân viên của quán
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Truy cập dữ liệu hoạt động của nhân viên
+                                img(src="./images/home/block-4.png", alt="Table")
+                    
             section.b-page-service
                 .b-content
-                    h3.b-text-title.wow.fadeInUp(data-wow-delay="1s",data-wow-duration="1s") PLEASE LET Joy SERVE YOU NOW
+                    h3.b-text-title.wow.fadeInUp(data-wow-delay="1s",data-wow-duration="1s") PLEASE LET #[span.b-current Joy] SERVE YOU NOW
                     .b-messeger.b-ripple
                         a(href="#").b-btn-messeger Messager
                         i.fab.fa-facebook-messenger
@@ -160,7 +137,7 @@ html(lang='en')
                 .b-content
                     .b-info
                         h3.b-text-title Joy and Your Business
-                        p.b-text-norm Connect your customer 24/7.Support your business 24/7.
+                        p.b-text-norm onnect your customer 24/7.Support your business 24/7.
                         a(href="#").b-link Benefit Discovery
             footer.b-page-footer.b-footer-main
                 .container
@@ -176,7 +153,7 @@ html(lang='en')
                         .col-lg-6
                             nav.b-page-nav
                                 ul.b-list-item.d-lg-block
-                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
                                     each itemList in listItem
                                         li.b-item
                                             -var get = itemList.link

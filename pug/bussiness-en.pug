@@ -16,14 +16,14 @@ html(lang='en')
                     .row
                         .col-lg-1
                             .b-logo
-                                a(href="index.html").b-link
+                                a(href="index-en.html").b-link
                                     img(src="./images/partial/logo.png", alt="Logo")
                         .col-lg-6
                             nav.b-page-nav
                                 .b-open-menu.d-lg-none
                                     a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
                                 ul.b-list-item.js-clone-nav.d-lg-block
-                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
                                     each itemList in listItem
                                         li.b-item
                                             -var get = itemList.link
@@ -31,23 +31,23 @@ html(lang='en')
                         .col-lg-5
                             .b-login.js-clone-lang.d-lg-block.d-none
                                 .b-item-lang
-                                    a(href="bussiness-en.html").b-link ENGLISH
+                                    a(href="bussiness.html").b-link VIETNAMESE
                                 .b-item
-                                    a(href="signin.html").b-link ĐĂNG NHẬP
+                                    a(href="signin-en.html").b-link SIGN IN
                                 .b-item.is-active
-                                    a(href="singup.html").b-link Đăng ký miễn phí
+                                    a(href="signup-en.html").b-link Sign up
 
             section.b-page-hero#b-page-hero
                 .container
                     .b-content
-                        h3.b-text-title Kết nối với khách hàng của bạn
-                        p.b-text-norm   Kết nổi khách hàng của bạn 24/7
-                        p.b-text-norm Hỗ trợ việc kinh doanh của bạn 24/7
+                        h3.b-text-title CONNECT WITH YOUR CUSTOMER ALL THE TIME
+                        p.b-text-norm   Connect your customer 24/7. 
+                        p.b-text-norm Support your business 24/7.
                     .b-watch
                         .b-item.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                            a(href="#").b-link Xem video
+                            a(href="#").b-link Watch guide video
                         .b-item.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                            a(href="#").b-link Đăng ký miễn phí
+                            a(href="#").b-link Free register
                     .b-images
                         img(src="./images/business/banner-top.png", alt="Bussiness",style="width:100%")
                     .b-scroll-bottom#top-menu
@@ -57,13 +57,13 @@ html(lang='en')
                     .row
                         .col-lg-6.offset-lg-3
                             .b-heading
-                                p.b-text-norm Nhận đánh giá, góp ý từ khách hàng dễ dàng và nhanh chóng
+                                p.b-text-norm Recieve feedback from your customer effectively
                     .row
                         .col-lg-5
                             .b-complain.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
                                 .b-content
-                                    h3.b-text-title Cách làm truyển thống
-                                    p.b-text-norm Bạn bối rối với hàng tần góp ý bừa bộn
+                                    h3.b-text-title Traditional Way
+                                    p.b-text-norm Be easily distracted with burdens of messy feedback
                                 .b-images
                                     img(src="./images/business/wwj-1.png", alt="WWWJ")
                         .col-lg-7
@@ -71,10 +71,10 @@ html(lang='en')
                                 .b-images
                                     img(src="./images/business/wwj-2.png", alt="WWWJ")
                                 .b-content
-                                    h3.b-text-title Với GonJoy
+                                    h3.b-text-title With  GonJoy
                                     p.b-text-norm
                                         :verbatim
-                                            Tự động thu nhập và phân tích góp ý của khách hàng để cải thiện dịch vụ của bạn
+                                            Automatic collect and analize customer's feedback in the real time to improve your service.
             section.b-page-function.b-business#function
                 .container-fluid
                     .row
@@ -84,33 +84,30 @@ html(lang='en')
                         .col-lg-6
                             .b-function
                                 .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Đặt Bàn
+                                    h5.b-text-function Feature
+                                    h3.b-text-title Table booking
                                     p.b-text-norm
                                         :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exe
                                     .b-list-function
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Quản lý đặt bàn hiệu quả
+                                            p.b-text-norm Manage your reservation booking effectively
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Giao diện hội thoại dể đáp ưng như cầu khách hàng nhanh chóng
+                                            p.b-text-norm Conversational interface to adapt your customer demand quickly
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Nhắc bạn giữ bàn
+                                            p.b-text-norm Remind your table reservations
                     .row
                         .col-lg-6
                             .b-function
                                 .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Ship Hàng
+                                    h5.b-text-function Feature
+                                    h3.b-text-title Shipping
                                     p.b-text-norm
                                         :verbatim
                                             orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -121,19 +118,19 @@ html(lang='en')
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Tương tác với khách hàng
+                                            p.b-text-norm Interact with your customer
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Kết nối với dịch vụ giao hàng
+                                            p.b-text-norm Connect with reliable shipper
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Theo dõi quá trình giao hàng
+                                            p.b-text-norm Track your shipping process
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Quản lý số lượng, chất lượng và chi phí giao hàng
+                                            p.b-text-norm Manage the quanity, quality and cost of delivery
                         .col-lg-6
                             .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/business/block-2.png", alt="Table",style="width:100%")
@@ -144,8 +141,8 @@ html(lang='en')
                         .col-lg-6
                             .b-function
                                 .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Phân tích ý kiến khách hàng
+                                    h5.b-text-function Feature
+                                    h3.b-text-title Customer behaviour analysis
                                     p.b-text-norm
                                         :verbatim
                                             orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -156,25 +153,25 @@ html(lang='en')
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Tư vấn viên marrketing ảo
+                                            p.b-text-norm A vitual marketing consultant
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Cung cấp phân tích hành vi khách hàng trên dồ thị
+                                            p.b-text-norm Provide your customer behaviour analysis by the stunning diagrams
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Thu thập dữ liệu khách hàng
+                                            p.b-text-norm Collect your customer database
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Giao tiếp và làm hài lòng khách hàng trực tiếp
+                                            p.b-text-norm Communicate and satisfy customer directly
                     .row
                         .col-lg-6
                             .b-function
                                 .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Tối ưu hóa menu
+                                    h5.b-text-function Feature
+                                    h3.b-text-title Optimise your menu
                                     p.b-text-norm
                                         :verbatim
                                             orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -185,19 +182,19 @@ html(lang='en')
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Chia sẻ menu của bàn với giao diện thân thiện
+                                            p.b-text-norm Show off your menu in the friendly interface.
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Tùy biến menuu theo mục đích và sự kiện của bạn
+                                            p.b-text-norm Customize menu for your target or event
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Sắp xếp menu thông minh theo ngày, giá và best seller
+                                            p.b-text-norm Smart arrange your menu by date, price and best seller
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Giới thiệu khuyến mãi
+                                            p.b-text-norm Introduce promotions to your diners 
                         .col-lg-6
                             .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/business/block-4.png", alt="Table",style="width:100%")
@@ -208,8 +205,8 @@ html(lang='en')
                         .col-lg-6
                             .b-function
                                 .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Quản lý nhân viên
+                                    h5.b-text-function Feature
+                                    h3.b-text-title Staff management
                                     p.b-text-norm
                                         :verbatim
                                             orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -220,15 +217,15 @@ html(lang='en')
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Phân quyền nhân viên của quán
+                                            p.b-text-norm Designate specific responsibility of staffs
                                         .b-item
                                             .b-icon
                                                 i.fas.fa-check
-                                            p.b-text-norm Truy cập dữ liệu hoạt động của nhân viên
+                                            p.b-text-norm Access staff's operation data
                                       
             section.b-page-person
-                .b-heading
-                    h3.b-text-title Hơn 500+ cửa hàng đã kết nổi với Joy
+                .b-heading.text-center
+                    h3.b-text-title Over 500 service providers connect with #[span.b-current Joy]
                 .b-tags
                     .b-item
                         .b-images
@@ -264,7 +261,7 @@ html(lang='en')
                 .container
                     .col-lg-8.offset-lg-2
                         .b-content
-                            h3.b-text-title.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s") Kết nôi với khách hàng của bạn
+                            h3.b-text-title.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s") CONNECT WITH YOUR CUSTOMER ALL THE TIME
                             p.b-text-norm.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                                 :verbatim
                                     orem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -285,7 +282,7 @@ html(lang='en')
                         .col-lg-6
                             nav.b-page-nav#top-header
                                 ul.b-list-item.d-lg-block
-                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
                                     each itemList in listItem
                                         li.b-item
                                             -var get = itemList.link

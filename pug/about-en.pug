@@ -16,14 +16,14 @@ html(lang='en')
                     .row
                         .col-lg-1
                             .b-logo
-                                a(href="index.html").b-link
+                                a(href="index-en.html").b-link
                                     img(src="./images/partial/logo.png", alt="Logo")
                         .col-lg-6
                             nav.b-page-nav
                                 .b-open-menu.d-lg-none
                                     a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
                                 ul.b-list-item.js-clone-nav.d-lg-block
-                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
                                     each itemList in listItem
                                         li.b-item
                                             -var get = itemList.link
@@ -31,11 +31,11 @@ html(lang='en')
                         .col-lg-5
                             .b-login.js-clone-lang.d-lg-block.d-none
                                 .b-item-lang
-                                    a(href="about-en.html").b-link ENGLISH
+                                    a(href="about.html").b-link VIETNAMSE
                                 .b-item
-                                    a(href="signin.html").b-link ĐĂNG NHẬP
+                                    a(href="signin.html").b-link SIGN IN
                                 .b-item.is-active
-                                    a(href="singup.html").b-link Đăng ký miễn phí
+                                    a(href="signup-en.html").b-link Sign up
             section.b-page-hero.b-about
                 .container
                     .b-scroll-bottom#top-menu
@@ -45,7 +45,7 @@ html(lang='en')
                     .row
                         .col-lg-3.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
                             .b-content
-                                h3.b-text-title Từ đam mê, Từ khao khát
+                                h3.b-text-title From Passion, From Desire
                             .b-images
                                 img(src="./images/about-us/Nhan_Tai_Dat_Viec.png", alt="nhanTai")
                         .col-lg-9.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
@@ -71,31 +71,31 @@ html(lang='en')
                         .col-lg-6
                             .b-vision
                                 .b-heading
-                                    h3.b-text-title Tầm nhìn
+                                    h3.b-text-title VISION
                                 .b-content
                                     .b-list-item.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                                         .b-icon
                                             img(src="./images/about-us/Cong_Nghe.svg", alt="Cong")
                                         .b-content
-                                            p.b-text-norm Công nghệ 4.0 sẽ thay đổi cách chúng ta sống và làm việc.
+                                            p.b-text-norm Technology 4.0 will change the way we live and work.
                                     .b-list-item.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                                         .b-icon
                                             img(src="./images/about-us/Hieu_Qua_Cong_VIec.svg", alt="Cong")
                                         .b-content
                                             p.b-text-norm
                                                 :verbatim
-                                                    Hiệu quả công việc, chất lượng cuộc sống trong một thế giới phẳng đang và sẽ là một thử thách cho toàn xã hội.         
+                                                    Working performance, life quality in a flat world is and will be a challenge for the whole society.     
                                     .b-list-item.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                                         .b-icon
                                             img(src="./images/about-us/Dap_Ung.svg", alt="Cong")
                                         .b-content
                                             p.b-text-norm
                                                 :verbatim
-                                                    Đáp ứng kịp thời những mong muốn ẩn sâu bên trong của khách hàng (customer’s insight) là thách thức của mọi doanh nghiệp.
+                                                    Timely responding to the customer's hidden desire. Easy to share
                         .col-lg-6
                             .b-vision
                                 .b-heading
-                                    h3.b-text-title Sứ mệnh
+                                    h3.b-text-title GOAL
                                 .b-content
                                     .b-list-item.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                                         .b-icon
@@ -103,23 +103,23 @@ html(lang='en')
                                         .b-content
                                             p.b-text-norm
                                                 :verbatim
-                                                    Ứng dụng trí tuệ nhân tạo, big data, IoT xây dựng một trợ lý ảo có khả năng cá nhân hoá cao, dễ dàng chia sẻ, hỗ trợ người dùng trong ăn uống và giải trí.
+                                                    Applying artificial intelligence, big data, IoT, and building a deeply personalized virtual assistant, daily supporting users in dining and entertainment.
                                     .b-list-item.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                                         .b-icon
                                             img(src="./images/about-us/Khuyen_Cao.svg", alt="Cong")
                                         .b-content
-                                            p.b-text-norm Công nghệ 4.0 sẽ thay đổi cách chúng ta sống và làm việc.
+                                            p.b-text-norm Smart recommendation for Healthy Eating.
                                     .b-list-item.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                                         .b-icon
                                             img(src="./images/about-us/Thu_Nhap_Trai_Nghiem.svg", alt="Cong")
                                         .b-content
-                                            p.b-text-norm Công nghệ 4.0 sẽ thay đổi cách chúng ta sống và làm việc.
+                                            p.b-text-norm Real-time collecting user experience, helping enterprises to relocate 5P (Product, Price, Person, Promotion, Place) and customers to relocate 5E (Entice, Enter, Engage, Exit, Expand)
             section.b-page-coe
                 .container
                     .row
                         .col-lg-12
                             .b-heading
-                                h3.b-text-title Đội ngũ nhóm phát triển
+                                h3.b-text-title Development Team
                     .row
                         .col-lg-4
                             .b-card.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
@@ -163,7 +163,7 @@ html(lang='en')
                         .col-lg-6
                             nav.b-page-nav
                                 ul.b-list-item.d-lg-block
-                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                    -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness-en.html'}] 
                                     each itemList in listItem
                                         li.b-item
                                             -var get = itemList.link

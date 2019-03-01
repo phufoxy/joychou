@@ -2,8 +2,11 @@
   position: relative;
   padding: 20px 0;
   border-top: 1px solid $white;
+
   &.b-footer-main {
-    background-color: #e74852;
+    background-image: -webkit-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+    background-image: -moz-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+    background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
   }
   .b-logo {
     position: relative;

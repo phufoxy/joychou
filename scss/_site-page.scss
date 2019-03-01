@@ -34,6 +34,9 @@ img {
     background: transparent;
   }
 }
+.b-current {
+  color: #e74852;
+}
 @keyframes animationArrow {
   0% {
     top: 60%;
@@ -68,9 +71,6 @@ body {
   background-image: -webkit-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
   background-image: -moz-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
   background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
-  @media screen and(max-width:1200px) {
-    position: relative;
-  }
   .b-page-intro {
     position: relative;
     .b-overate {
@@ -151,20 +151,6 @@ body {
           width: 200px;
         }
       }
-      @media screen and(max-width:992px) {
-        &::after {
-          content: "";
-          position: absolute;
-          height: 1px;
-          width: 100%;
-          background-color: $color_white;
-          left: 0;
-          top: 100%;
-        }
-        .b-content {
-          padding: 0 0px 0 0;
-        }
-      }
     }
     .b-enterprise {
       background-image: url("../images/index/img-2.png");
@@ -228,18 +214,6 @@ body {
           width: 70%;
         }
       }
-      @media screen and(max-width:992px) {
-        margin-top: 10px;
-        &::after {
-          content: "";
-          position: absolute;
-          height: 1px;
-          width: 100%;
-          background-color: $color_white;
-          left: 0;
-          top: 90%;
-        }
-      }
     }
   }
   .b-page-footer {
@@ -250,11 +224,11 @@ body {
   position: relative;
   background-image: url("../images/business/background-top.png");
   background-size: 100% 100%;
-  height: 768px;
+  height: 999px;
   &.b-about {
     background-image: url("../images/about-us/Background_Header.png");
     background-repeat: no-repeat;
-    height: 600px;
+    height: 555px;
   }
   &.b-users {
     background-image: url("../images/home/top-banner.png");
@@ -262,14 +236,8 @@ body {
     background-position: top center;
     background-repeat: no-repeat;
     height: 768px;
-    .b-content {
-      position: absolute;
-      left: 20%;
-      top: 30%;
-      background: transparent;
-      @include tranform(translate(-20%, -50%));
-      text-align: left;
-      &.b-en {
+    &.b-en {
+      .b-content {
         top: 40%;
         .b-text-title {
           width: 330px;
@@ -277,10 +245,23 @@ body {
           line-height: 76px;
           word-wrap: break-word;
         }
-        .b-text-norm{
+        .b-text-norm {
           width: 50%;
         }
       }
+      .b-messeger {
+        position: absolute;
+        left: 20%;
+        top: 70%;
+      }
+    }
+    .b-content {
+      position: absolute;
+      left: 20%;
+      top: 30%;
+      background: transparent;
+      @include tranform(translate(-20%, -50%));
+      text-align: left;
       .b-text-title {
         font-family: "Samsung";
         font-size: 36px;
@@ -353,27 +334,6 @@ body {
         width: 100%;
       }
     }
-    @media screen and(max-width:992px) {
-      .b-content {
-        position: absolute;
-        left: 50%;
-        top: 30%;
-        background: transparent;
-        @include tranform(translate(-30%, -50%));
-        .b-text-norm {
-          width: 100%;
-        }
-      }
-      .b-images {
-        visibility: hidden;
-      }
-      .b-messeger {
-        position: absolute;
-        left: 30%;
-        top: 45%;
-        @include tranform(translate(10%, -50%));
-      }
-    }
   }
   .b-content {
     position: absolute;
@@ -399,24 +359,30 @@ body {
     @include tranform(translate(-50%, -50%));
     .b-item {
       display: inline-block;
-      padding-left: 10px;
-      padding-right: 10px;
-      @media screen and(max-width:992px) {
-        display: block;
-        margin-top: 30px;
-      }
+      width: 250px;
+      height: 50px;
+      background-color: $white;
+      text-align: center;
+      padding: 16px 10px 10px 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 50px;
+      box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+
       .b-link {
-        background-color: $white;
-        padding: 15px 20px 10px 20px;
-        border-radius: 20px;
+        background: transparent;
         color: $black;
         text-decoration: none;
         font-family: "Samsung";
         font-size: 14px;
-        box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        height: 100%;
         @include transition(all 0.3s ease-in-out);
-        &:hover {
-          background-color: #ed2839;
+      }
+      &:hover {
+        background-color: #e74852;
+        .b-link {
           color: $white;
         }
       }
@@ -426,9 +392,11 @@ body {
     position: absolute;
     top: 90%;
     left: 50%;
+    background: transparent;
+    width: 80%;
     @include tranform(translate(-50%, -50%));
     img {
-      width: 1000px;
+      width: 100%;
     }
   }
   .b-scroll-bottom {
@@ -458,15 +426,15 @@ body {
 .b-page-customer {
   position: relative;
   padding: 50px 0 30px 0;
-  margin-top: 100px;
+  margin-top: 150px;
   .b-heading {
     text-align: center;
-    font-family: "Samsung";
     .b-text-norm {
-      width: 60%;
+      width: 100%;
       margin: 0 auto;
-      font-size: 18px;
+      font-size: 24px;
       letter-spacing: 1.5px;
+      font-family: "Samsung";
     }
   }
   .b-complain {
@@ -516,9 +484,22 @@ body {
 }
 .b-page-function {
   position: relative;
+  .b-images {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+  &.b-business {
+    .b-function {
+      position: relative;
+      @include tranform(translate(0%, 50%));
+    }
+  }
   .b-function {
     position: relative;
-    @include tranform(translate(0%, 100%));
+    @include tranform(translate(0%, 150%));
     .b-content {
       // width: 80%;
       padding: 0 40px 0 40px;
@@ -530,12 +511,14 @@ body {
       .b-text-title {
         color: $black;
         font-size: "Samsung";
-        font-size: 36px;
+        font-size: 42px;
+        font-weight: 700;
       }
       > .b-text-norm {
         color: #888888;
         font-family: "roboto";
         font-size: 14px;
+        width: 80%;
       }
       .b-list-function {
         .b-item {
@@ -567,23 +550,15 @@ body {
       }
     }
   }
-  @media screen and(max-width:992px) {
-    margin-bottom: 30px;
-    .b-images {
-      margin-top: 140px;
-    }
-    .b-function {
-      margin-top: 50px;
-    }
-  }
 }
 .b-page-person {
   position: relative;
   .b-heading {
     @include tranform(translate(0, -20px));
+    text-align: center;
     .b-text-title {
       font-family: "Samsung";
-      font-size: 26px;
+      font-size: 36px;
     }
   }
   .b-card {
@@ -629,6 +604,13 @@ body {
       &:nth-child(2) {
         left: 75%;
         top: 40%;
+        .b-content {
+          left: -310px;
+          &::after {
+            content: "\f0da";
+            left: 100%;
+          }
+        }
       }
       cursor: pointer;
       .b-images {
@@ -649,7 +631,7 @@ body {
         background-color: $white;
         box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
         padding: 5px;
-        width: 200px;
+        width: 300px;
         top: -30px;
         left: 120px;
         border-radius: 4px;
@@ -682,9 +664,6 @@ body {
       }
     }
   }
-  @media screen and(max-width:992px) {
-    display: none;
-  }
 }
 .b-page-conenct {
   position: relative;
@@ -697,6 +676,7 @@ body {
     @include tranform(translate(0%, 70%));
     .b-text-title {
       color: $white;
+      font-size: 36px;
       font-family: "Samsung";
     }
     .b-text-norm {
@@ -710,13 +690,13 @@ body {
     }
     .b-link {
       background-color: $white;
-      padding: 16px 20px 10px 20px;
+      padding: 20px 50px 16px 50px;
       color: $black;
       font-family: "Samsung";
       border-radius: 50px;
       font-size: 14px;
       text-decoration: none;
-      box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
       @include transition(all 0.3s ease-in-out);
       &:hover {
         color: $white;
@@ -727,7 +707,7 @@ body {
 }
 .b-page-help {
   position: relative;
-  padding: 10px 0;
+  padding: 50px 0;
   .b-heading {
     .b-text-norm {
       font-family: "roboto";
@@ -761,16 +741,6 @@ body {
       }
     }
   }
-  @media screen and(max-width:992px) {
-    .b-card {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      .b-card-item {
-        width: 50%;
-      }
-    }
-  }
 }
 .b-page-service {
   position: relative;
@@ -786,8 +756,10 @@ body {
     text-align: center;
     .b-text-title {
       font-family: "Samsung";
-      font-size: 36px;
+      font-size: 34px;
       margin-bottom: 30px;
+      width: 100%;
+      word-wrap: break-word;
     }
     .b-messeger {
       position: absolute;
@@ -833,9 +805,6 @@ body {
         transition: background 0s;
       }
     }
-  }
-  @media screen and (max-width: 992px) {
-    margin-top: 150px;
   }
 }
 .b-page-business {
@@ -895,35 +864,11 @@ body {
       }
     }
   }
-  @media screen and(max-width:992px) {
-    height: 1000px;
-    .b-images {
-      margin-top: 0;
-      width: 100%;
-    }
-    .b-content {
-      margin-top: 0;
-      width: 100%;
-      .b-text-title {
-        position: relative;
-        top: 0;
-        left: 0;
-        @include tranform(translate(0%, 0%));
-      }
-      .b-text-norm {
-        position: relative;
-        top: 0;
-        left: 0;
-        @include tranform(translate(0%, 0%));
-      }
-      .b-link {
-      }
-    }
-  }
 }
 .b-page-passion {
   padding: 50px 0;
   .b-images {
+    margin-top: 30px;
     img {
       width: 100%;
     }
@@ -955,15 +900,15 @@ body {
       display: flex;
       flex-wrap: wrap;
       .b-icon {
-        width: 20%;
+        width: 25%;
         img {
-          width: 100px;
-          height: 100px;
+          width: 130px;
+          height: 130px;
         }
       }
       .b-content {
-        width: 80%;
-        margin-top: 30px;
+        width: 75%;
+        margin-top: 35px;
         .b-text-norm {
           font-family: "roboto";
           font-size: 18px;
@@ -979,7 +924,8 @@ body {
     @include tranform(translate(0, -20px));
     .b-text-title {
       font-family: "Samsung";
-      font-size: 26px;
+      font-size: 36px;
+      font-weight: 700;
     }
   }
   .b-card {
@@ -1006,108 +952,177 @@ body {
       .b-text-norm {
         color: #888888;
         font-family: "roboto";
+        font-weight: 700;
+        font-size: 16px;
       }
     }
   }
 }
-.b-page-singin {
+.b-page-login {
+  position: absolute;
   display: flex;
-  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
-  background-color: $white;
-  .b-intro {
+  height: 100%;
+  .b-login {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 9999;
+    text-align: right;
+    .b-lang {
+      position: relative;
+      top: -15px;
+      .b-link {
+        color: $color_white;
+        font-family: "Samsung";
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+    .b-register {
+      display: flex;
+      .b-item {
+        .b-text-title {
+          color: $white;
+          font-size: 18px;
+          font-family: "roboto";
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .b-link {
+          padding: 10px 30px 10px 30px;
+          border: 1px solid $white;
+          border-radius: 5px;
+          text-decoration: none;
+          color: $white;
+          font-family: "roboto";
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .b-page-signin {
     position: fixed;
-    right: 0;
+    left: 0;
+    top: 0;
+    min-width: 40%;
+    width: 40%;
     height: 100%;
+    background: $white;
+    .b-header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      .b-logo {
+        img {
+          width: 70px;
+          cursor: pointer;
+        }
+      }
+    }
+    .b-content {
+      position: absolute;
+      width: 80%;
+      left: 50%;
+      top: 50%;
+      @include tranform(translate(-50%, -50%));
+      text-align: center;
+      &.b-login {
+        top: 30%;
+      }
+      .b-text-title {
+        font-family: "Samsung";
+        font-size: 26px;
+      }
+      .b-form {
+        position: relative;
+        top: 30px;
+        .b-form-group {
+          width: 100%;
+          margin-top: 20px;
+          input[type="text"],
+          [type="password"] {
+            width: 80%;
+            height: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 1px solid #888888;
+            font-family: "roboto";
+            @include transition(all 0.3s ease-in-out);
+            outline: 0 !important;
+            color: #888888;
+            &:focus {
+              box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+            }
+          }
+          input[type="submit"] {
+            background-color: #ed2839;
+            border: none;
+            box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+            padding: 12px 30px 10px 30px;
+            border-radius: 50px;
+            font-family: "roboto";
+            color: $white;
+            cursor: pointer;
+          }
+        }
+        .b-forget {
+          position: relative;
+          top: 30px;
+          color: #888888;
+          font-family: "roboto";
+          font-size: 16px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .b-page-intro {
+    position: fixed;
+    min-width: 60%;
     width: 60%;
-    background-color: rgba(107, 116, 134, 1);
-    z-index: 1;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: #6b7486;
+
+    .b-header {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      text-align: right;
+      z-index: 999;
+    }
     .b-content {
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 100%;
       @include tranform(translate(-50%, -50%));
       text-align: center;
+      z-index: 999;
       .b-text-title {
         font-family: "Samsung";
+        color: $white;
         font-size: 36px;
-        color: $color_white;
       }
       .b-text-norm {
         font-family: "roboto";
         font-size: 16px;
-        color: $color_white;
+        color: $white;
       }
     }
     .b-images {
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      width: 100%;
+      @include tranform(translate(-50%, 0%));
       img {
         width: 100%;
       }
-    }
-  }
-  .b-singin {
-    z-index: 1;
-    position: fixed;
-    height: 100%;
-    width: 40%;
-    left: 0;
-    background-color: $white;
-    .b-content {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 100%;
-      @include tranform(translate(-50%, -50%));
-      text-align: center;
-      .b-text-title {
-        font-size: 26px;
-        font-family: "Samsung";
-        color: $black;
-      }
-      .b-form-group {
-        margin-top: 20px;
-        input {
-          width: 70%;
-          border: 1px solid #888888;
-          padding: 15px 10px;
-          color: #888888;
-          outline: 0;
-          &:hover {
-            box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-          }
-        }
-        input[type="submit"] {
-          width: 30%;
-          border: 0.1px solid #888888;
-          padding: 12px 10px 10px 10px;
-          color: $white;
-          border-radius: 50px;
-          background-color: #e74852;
-          font-family: "roboto";
-          cursor: pointer;
-          margin-bottom: 10px;
-        }
-      }
-      .b-link {
-        color: #888888;
-        text-decoration: none;
-        font-family: "roboto";
-        &:hover {
-          color: #e74852;
-          box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-        }
-      }
-    }
-  }
-  @media screen and(max-width:992px) {
-    .b-intro {
-      display: none;
-    }
-    .b-singin {
-      position: relative;
-      width: 100%;
-      height: 800px;
     }
   }
 }
