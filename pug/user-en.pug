@@ -11,40 +11,41 @@ html(lang='en')
                             i.fas.fa-window-close
                 .site-mobile-menu-body
                 .site-mobile-menu-lang
-            header.b-page-header.b-bussiness#b-page-header
+            header.b-page-header.b-index#b-page-header
                 .container
-                    .row
-                        .col-lg-1
-                            .b-logo
-                                a(href="index-en.html").b-link
-                                    img(src="./images/partial/logo.png", alt="Logo")
-                        .col-lg-6
-                            nav.b-page-nav
-                                .b-open-menu.d-lg-none
-                                    a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
-                                ul.b-list-item.js-clone-nav.d-lg-block
-                                    -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
-                                    each itemList in listItem
-                                        li.b-item
-                                            -var get = itemList.link
-                                            a(href=get).b-link #{itemList.item}
-                        .col-lg-5
-                            .b-login.js-clone-lang.d-lg-block.d-none
-                                .b-item-lang
-                                    a(href="user-en.html").b-link VIETNAMESE
-                                .b-item
-                                    a(href="signin-en.html").b-link SIGN IN
-                                .b-item.is-active
-                                    a(href="signup-en.html").b-link Sign up
-            section.b-page-hero.b-users.b-en
+                    .b-header-top.d-lg-block.d-none
+                            .b-item-lang
+                                a(href="user.html").b-link VIETNAMESE
+                    .b-header-bottom
+                            .row
+                                .col-lg-8
+                                    .b-header-left
+                                        .b-logo
+                                            a(href="index.html").b-link
+                                                img(src="./images/partial/logo.png", alt="Logo")
+                                        nav.b-page-nav
+                                            .b-open-menu.d-lg-none
+                                                a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
+                                            ul.b-list-item.js-clone-nav.d-lg-block.d-none
+                                                            -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                                            each itemList in listItem
+                                                                li.b-item
+                                                                    -var get = itemList.link
+                                                                    a(href=get).b-link #{itemList.item}
+                                .col-lg-4
+                                    .b-header-right
+                                        .b-login.js-clone-lang.d-lg-block.d-none
+                                            .b-item
+                                                a(href="signin.html").b-link SIGN IN
+                                            .b-item
+                                                a(href="#").b-link.b-register Sign up
+            section.b-page-hero.b-users
                 .container
                     .b-content
                         h3.b-text-title.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s") Revolutionary Artificial Intelligent Assitant
                         p.b-text-norm.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")   Your friendly virtual dining assitant. Find right dining place in the right time. Inbox "Gonjoy" on Facebook Messenger
-                        
-                    .b-messeger.b-ripple
-                        a(href="#").b-btn-messeger Messager
-                        i.fab.fa-facebook-messenger
+                        a(href="#").b-btn-messeger.b-ripple Messager
+                            i.fab.fa-facebook-messenger
                     .b-images
                         img(src="./images/home/top-banner-item.png", alt="Bussiness")
                     .b-scroll-bottom#top-menu
@@ -55,7 +56,7 @@ html(lang='en')
                         .col-lg-8.offset-lg-2
                             .b-heading.text-center
                                 p.b-text-norm OUTSTANDING FEARTURES
-                                h3.b-text-title #[span.b-current Joy] How Joy can help you?
+                                h3.b-text-title How #[span.b-current Joy]  Joy can help you?
                     div.b-card.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
                         -var listItem = [{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'Correctly searching'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Smart recommendation'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Save time'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Save money'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Take care your emotion'},{scr:'./images/home/Tim_Dung_Dia_Diem.svg',title:'Feedback'},{scr:'./images/home/De_Xuat_Mon_An.svg',title:'Share with your friend'},{scr:'./images/home/Tiet_Kiem_Thoi_GIan.svg',title:'Reservation Booking'},{scr:'./images/home/Tiet_Kiem_Chi_Phi.svg',title:'Promotion'},{scr:'./images/home/Tim_Theo_Cam_Xuc.svg',title:'Online order supporter'}]
                         each item in listItem
@@ -66,79 +67,72 @@ html(lang='en')
                                 .b-content
                                     p.b-text-norm #{item.title}
             section.b-page-function#function
-                .container-fluid
-                    .row
-                        .col-lg-6
+                .container
+                    .b-block-function
+                        .b-function-left
                             .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/home/block-1.png", alt="Table")
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title HEALTHY RECOMMENDATION
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                    
-                    .row
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title GAMING FEEDBACK
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                        .col-lg-6
+                        .b-function-right
+                            .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                                h3.b-text-title HEALTHY RECOMMENDATION
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem
+                    .b-block-function
+                        .b-function-left
+                            .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
+                                h3.b-text-title GAMING FEEDBACK
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                        .b-function-right
                             .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/home/block-2.png", alt="Table")
-                    .row
-                        .col-lg-6
+                    .b-block-function
+                        .b-function-left
                             .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/home/block-3.png", alt="Table")
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title NATURAL LANGUAGE PROCESSING ALGORITHM
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                                  
-                    .row
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title PERSONALIZATION
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                        .col-lg-6
+                        .b-function-right
+                            .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                                h3.b-text-title NATURAL LANGUAGE PROCESSING ALGORITHM
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem
+                    .b-block-function
+                        .b-function-left
+                            .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
+                                h3.b-text-title PERSONALIZATION
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                        .b-function-right
                             .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/home/block-4.png", alt="Table")
-                    
+                            
             section.b-page-service
                 .b-content
                     h3.b-text-title.wow.fadeInUp(data-wow-delay="1s",data-wow-duration="1s") PLEASE LET #[span.b-current Joy] SERVE YOU NOW
-                    .b-messeger.b-ripple
-                        a(href="#").b-btn-messeger Messager
+                    a(href="#").b-btn-messeger.b-ripple Messager
                         i.fab.fa-facebook-messenger
             section.b-page-business
-                .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                    img(src="./images/home/bottom-banner-item.png", alt="Banner", style="width:100%")
-                .b-content
-                    .b-info
-                        h3.b-text-title Joy and Your Business
-                        p.b-text-norm onnect your customer 24/7.Support your business 24/7.
-                        a(href="#").b-link Benefit Discovery
+                .b-business-left
+                    .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                        img(src="./images/home/bottom-banner-item.png", alt="Banner", style="width:100%")
+                .b-business-right
+                    .b-content
+                        .b-info
+                            h3.b-text-title Joy and Your Business
+                            p.b-text-norm Connect your customer 24/7.Support your business 24/7.
+                            a(href="#").b-link Benifit Discovery
+                                i.fas.fa-arrow-right
             footer.b-page-footer.b-footer-main
                 .container
                     .row

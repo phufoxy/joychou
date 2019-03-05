@@ -3,7 +3,7 @@ html(lang='en')
     include head/_site-head
     body
         include loader/_site-loader
-        .b-index
+        .b-wrapper
             .site-mobile-menu
                 .site-mobile-menu-header
                     .site-mobile-menu-close
@@ -11,52 +11,84 @@ html(lang='en')
                             i.fas.fa-window-close
                 .site-mobile-menu-body
                 .site-mobile-menu-lang
-            header.b-page-header#b-page-header
+            header.b-page-header.b-index#b-page-header
+                .container
+                    .b-header-top.d-lg-block.d-none
+                            .b-item-lang
+                                a(href="index-en.html").b-link ENGLISH
+                    .b-header-bottom
+                            .row
+                                .col-lg-8
+                                    .b-header-left
+                                        .b-logo
+                                            a(href="index.html").b-link
+                                                img(src="./images/partial/logo.png", alt="Logo")
+                                        nav.b-page-nav
+                                            .b-open-menu.d-lg-none
+                                                a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
+                                            ul.b-list-item.js-clone-nav.d-lg-block.d-none
+                                                            -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                                            each itemList in listItem
+                                                                li.b-item
+                                                                    -var get = itemList.link
+                                                                    a(href=get).b-link #{itemList.item}
+                                .col-lg-4
+                                    .b-header-right
+                                        .b-login.js-clone-lang.d-lg-block.d-none
+                                            .b-item
+                                                a(href="signin.html").b-link ĐĂNG NHẬP
+                                            .b-item
+                                                a(href="#").b-link.b-register Đăng ký miễn phí
+            section.b-page-main.b-page-index
+                .b-main-content
+                    .b-overate.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
+                        .b-content
+                            h3.b-text-title Trợ lý Ảo đột phá
+                            p.b-text-norm 
+                                :verbatim
+                                    Người trở lý với lời khuyên ẩm thực chất lừ cho bán. Indox ngày Gomjou trên Facenook Messenger.
+                            .b-btn-find
+                                a(href="#").b-link.b-ripple TÌM HIỂU NGAY
+                        .b-images
+                            img(src="./images/index/img-1.png", alt="Img")
+                    .b-enterprise.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
+                        .b-content
+                            h3.b-text-title Joy và Doanh Nghiệp
+                            p.b-text-norm 
+                                :verbatim
+                                    Kết nối khách hàng của bản 24/7
+                                    Hổ trọ việc kinh doanh của bán 24/7
+                            .b-btn-find
+                                a(href="#").b-link.b-ripple TÌM HIỂ NGAY
+                        .b-images
+                            img(src="./images/index/img-2.png", alt="Img")
+            footer.b-page-footer.b-index#b-footer
                 .container
                     .row
                         .col-lg-1
                             .b-logo
-                                a(href="index.html").b-link
-                                    img(src="./images/partial/logo.png", alt="Logo")
+                                img(src="./images/partial/logo.png", alt="Logo")
+                        .col-lg-3
+                            .b-content-footer
+                                p.b-text-norm
+                                    :verbatim
+                                        &copy; 2017 GOnJoy. All Rights Reserved
                         .col-lg-6
                             nav.b-page-nav
-                                .b-open-menu.d-lg-none
-                                    a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
-                                ul.b-list-item.js-clone-nav.d-lg-block
-                                                -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
-                                                each itemList in listItem
-                                                    li.b-item
-                                                        -var get = itemList.link
-                                                        a(href=get).b-link #{itemList.item}
-                        .col-lg-5
-                            .b-login.js-clone-lang.d-lg-block.d-none
-                                .b-item-lang
-                                    a(href="index-en.html").b-link ENGLISH
-                                .b-item
-                                    a(href="signin.html").b-link ĐĂNG NHẬP
-                                .b-item.is-active
-                                    a(href="#").b-link Đăng ký miễn phí
-            section.b-page-intro
-                .container-fluid
-                    .row
-                        .col-lg-6
-                            .b-overate.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                .b-content
-                                    h3.b-text-title Trợ lý Ảo đột phá
-                                    p.b-text-norm 
-                                        :verbatim
-                                            Người trở lý với lời khuyên ẩm thực chất lừ cho bán. Indox ngày Gomjou trên Facenook Messenger.
-                                    a(href="#").b-link.b-ripple TÌM HIỂU NGAY
-                        .col-lg-6
-                            .b-enterprise.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                .b-content
-                                    h3.b-text-title Joy và Doanh Nghiệp
-                                    p.b-text-norm 
-                                        :verbatim
-                                            Kết nối khách hàng của bản 24/7
-                                            Hổ trọ việc kinh doanh của bán 24/7
-                                    a(href="#").b-link.b-ripple TÌM HIỂ NGAY
-            include footer/_site-footer
+                                ul.b-list-item
+                                    -var listItem = ['NGƯỜI DÙNG','DOANH NGHIỆP','FAQ','VỀ CHÚNG TÔI','BLOCK']
+                                    each item in listItem
+                                        li.b-item
+                                            a(href="#").b-link #{item}
+                        .col-lg-2
+                            nav.b-page-nav
+                                ul.b-list-social
+                                    li.b-item
+                                        a(href="#").b-link #[i.fab.fa-facebook-f]
+                                    li.b-item
+                                        a(href="#").b-link #[i.fab.fa-youtube]
+                                    li.b-item
+                                        a(href="#").b-link #[i.fab.fa-google-plus-g]
         script(src="https://code.jquery.com/jquery-2.2.0.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
         script(src="./js/wow.js")

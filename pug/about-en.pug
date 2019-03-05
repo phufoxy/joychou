@@ -11,31 +11,34 @@ html(lang='en')
                             i.fas.fa-window-close
                 .site-mobile-menu-body
                 .site-mobile-menu-lang
-            header.b-page-header.b-bussiness#b-page-header
+            header.b-page-header.b-index#b-page-header
                 .container
-                    .row
-                        .col-lg-1
-                            .b-logo
-                                a(href="index-en.html").b-link
-                                    img(src="./images/partial/logo.png", alt="Logo")
-                        .col-lg-6
-                            nav.b-page-nav
-                                .b-open-menu.d-lg-none
-                                    a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
-                                ul.b-list-item.js-clone-nav.d-lg-block
-                                    -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
-                                    each itemList in listItem
-                                        li.b-item
-                                            -var get = itemList.link
-                                            a(href=get).b-link #{itemList.item}
-                        .col-lg-5
-                            .b-login.js-clone-lang.d-lg-block.d-none
-                                .b-item-lang
-                                    a(href="about.html").b-link VIETNAMSE
-                                .b-item
-                                    a(href="signin.html").b-link SIGN IN
-                                .b-item.is-active
-                                    a(href="signup-en.html").b-link Sign up
+                    .b-header-top.d-lg-block.d-none
+                            .b-item-lang
+                                a(href="index.html").b-link VIETNAMESE
+                    .b-header-bottom
+                            .row
+                                .col-lg-8
+                                    .b-header-left
+                                        .b-logo
+                                            a(href="index-en.html").b-link
+                                                img(src="./images/partial/logo.png", alt="Logo")
+                                        nav.b-page-nav
+                                            .b-open-menu.d-lg-none
+                                                a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
+                                            ul.b-list-item.js-clone-nav.d-lg-block.d-none
+                                                            -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                                            each itemList in listItem
+                                                                li.b-item
+                                                                    -var get = itemList.link
+                                                                    a(href=get).b-link #{itemList.item}
+                                .col-lg-4
+                                    .b-header-right
+                                        .b-login.js-clone-lang.d-lg-block.d-none
+                                            .b-item
+                                                a(href="signin.html").b-link SIGN IN
+                                            .b-item
+                                                a(href="#").b-link.b-register Sign up
             section.b-page-hero.b-about
                 .container
                     .b-scroll-bottom#top-menu

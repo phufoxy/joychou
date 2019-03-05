@@ -11,32 +11,34 @@ html(lang='en')
                             i.fas.fa-window-close
                 .site-mobile-menu-body
                 .site-mobile-menu-lang
-            header.b-page-header.b-bussiness#b-page-header
+            header.b-page-header.b-index#b-page-header
                 .container
-                    .row
-                        .col-lg-1
-                            .b-logo
-                                a(href="index.html").b-link
-                                    img(src="./images/partial/logo.png", alt="Logo")
-                        .col-lg-6
-                            nav.b-page-nav
-                                .b-open-menu.d-lg-none
-                                    a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
-                                ul.b-list-item.js-clone-nav.d-lg-block
-                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
-                                    each itemList in listItem
-                                        li.b-item
-                                            -var get = itemList.link
-                                            a(href=get).b-link #{itemList.item}
-                        .col-lg-5
-                            .b-login.js-clone-lang.d-lg-block.d-none
-                                .b-item-lang
-                                    a(href="bussiness-en.html").b-link ENGLISH
-                                .b-item
-                                    a(href="signin.html").b-link ĐĂNG NHẬP
-                                .b-item.is-active
-                                    a(href="singup.html").b-link Đăng ký miễn phí
-
+                    .b-header-top.d-lg-block.d-none
+                            .b-item-lang
+                                a(href="bussiness-en.html").b-link ENGLISH
+                    .b-header-bottom
+                            .row
+                                .col-lg-8
+                                    .b-header-left
+                                        .b-logo
+                                            a(href="index.html").b-link
+                                                img(src="./images/partial/logo.png", alt="Logo")
+                                        nav.b-page-nav
+                                            .b-open-menu.d-lg-none
+                                                a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
+                                            ul.b-list-item.js-clone-nav.d-lg-block.d-none
+                                                            -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                                            each itemList in listItem
+                                                                li.b-item
+                                                                    -var get = itemList.link
+                                                                    a(href=get).b-link #{itemList.item}
+                                .col-lg-4
+                                    .b-header-right
+                                        .b-login.js-clone-lang.d-lg-block.d-none
+                                            .b-item
+                                                a(href="signin.html").b-link ĐĂNG NHẬP
+                                            .b-item
+                                                a(href="#").b-link.b-register Đăng ký miễn phí
             section.b-page-hero#b-page-hero
                 .container
                     .b-content
@@ -49,7 +51,7 @@ html(lang='en')
                         .b-item.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
                             a(href="#").b-link Đăng ký miễn phí
                     .b-images
-                        img(src="./images/business/banner-top.png", alt="Bussiness",style="width:100%")
+                        img(src="./images/business/banner-top.png", alt="Bussiness")
                     .b-scroll-bottom#top-menu
                         a(href="#function").b-link CUỘN XUỐNG
             section.b-page-customer
@@ -75,157 +77,120 @@ html(lang='en')
                                     p.b-text-norm
                                         :verbatim
                                             Tự động thu nhập và phân tích góp ý của khách hàng để cải thiện dịch vụ của bạn
-            section.b-page-function.b-business#function
-                .container-fluid
-                    .row
-                        .col-lg-6
-                            .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/business/block-1.png", alt="Table",style="width:100%")
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Đặt Bàn
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                                    .b-list-function
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Quản lý đặt bàn hiệu quả
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Giao diện hội thoại dể đáp ưng như cầu khách hàng nhanh chóng
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Nhắc bạn giữ bàn
-                    .row
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Ship Hàng
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                                    .b-list-function
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Tương tác với khách hàng
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Kết nối với dịch vụ giao hàng
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Theo dõi quá trình giao hàng
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Quản lý số lượng, chất lượng và chi phí giao hàng
-                        .col-lg-6
-                            .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/business/block-2.png", alt="Table",style="width:100%")
-                    .row
-                        .col-lg-6
-                            .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/business/block-3.png", alt="Table",style="width:100%")
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Phân tích ý kiến khách hàng
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                                    .b-list-function
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Tư vấn viên marrketing ảo
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Cung cấp phân tích hành vi khách hàng trên dồ thị
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Thu thập dữ liệu khách hàng
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Giao tiếp và làm hài lòng khách hàng trực tiếp
-                    .row
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Tối ưu hóa menu
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                                    .b-list-function
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Chia sẻ menu của bàn với giao diện thân thiện
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Tùy biến menuu theo mục đích và sự kiện của bạn
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Sắp xếp menu thông minh theo ngày, giá và best seller
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Giới thiệu khuyến mãi
-                        .col-lg-6
-                            .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/business/block-4.png", alt="Table",style="width:100%")
-                    .row
-                        .col-lg-6
-                            .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                img(src="./images/business/block-5.png", alt="Table",style="width:100%")
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h5.b-text-function Tính năng
-                                    h3.b-text-title Quản lý nhân viên
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                                    .b-list-function
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Phân quyền nhân viên của quán
-                                        .b-item
-                                            .b-icon
-                                                i.fas.fa-check
-                                            p.b-text-norm Truy cập dữ liệu hoạt động của nhân viên
-                                      
+            section.b-page-feature#function
+                .b-block-function
+                    .b-function-left
+                        .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
+                            img(src="./images/business/block-1.png", alt="Table",style="width:100%")
+                    .b-function-right  
+                        .b-function
+                            .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                                h5.b-text-function Tính năng
+                                h3.b-text-title Đặt Bàn
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                                        elementum in.
+                                .b-list-function
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Quản lý đặt bàn hiệu quả
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Giao diện hội thoại dể đáp ưng như cầu khách hàng nhanh chóng
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Nhắc bạn giữ bàn
+                .b-block-function
+                    .b-function-left
+                        .b-function
+                            .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                                h5.b-text-function Tính năng
+                                h3.b-text-title Đặt Bàn
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                                        elementum in.
+                                .b-list-function
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Quản lý đặt bàn hiệu quả
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Giao diện hội thoại dể đáp ưng như cầu khách hàng nhanh chóng
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Nhắc bạn giữ bàn  
+                    .b-function-right
+                        .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
+                            img(src="./images/business/block-2.png", alt="Table",style="width:100%")
+                .b-block-function
+                    .b-function-left
+                        .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
+                            img(src="./images/business/block-1.png", alt="Table",style="width:100%")
+                    .b-function-right  
+                        .b-function
+                            .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                                h5.b-text-function Tính năng
+                                h3.b-text-title Đặt Bàn
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                                        elementum in.
+                                .b-list-function
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Quản lý đặt bàn hiệu quả
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Giao diện hội thoại dể đáp ưng như cầu khách hàng nhanh chóng
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Nhắc bạn giữ bàn
+                .b-block-function
+                    .b-function-left
+                        .b-function
+                            .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                                h5.b-text-function Tính năng
+                                h3.b-text-title Đặt Bàn
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                                        elementum in.
+                                .b-list-function
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Quản lý đặt bàn hiệu quả
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Giao diện hội thoại dể đáp ưng như cầu khách hàng nhanh chóng
+                                    .b-item
+                                        .b-icon
+                                            i.fas.fa-check
+                                        p.b-text-norm Nhắc bạn giữ bàn  
+                    .b-function-right
+                        .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
+                            img(src="./images/business/block-2.png", alt="Table",style="width:100%") 
+                              
             section.b-page-person
                 .b-heading
                     h3.b-text-title Hơn 500+ cửa hàng đã kết nổi với Joy

@@ -19,149 +19,102 @@ $color_white: rgba(255, 255, 255, 0.7);
 }
 
 .b-page-header {
-  position: relative;
-  padding: 10px 0;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
   @include transition(all 0.3s ease-in-out);
-  &.b-singin {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background-color: transparent;
-    z-index: 9999;
-    .b-singin {
-      position: relative;
-      text-align: right;
-      @include tranform(translate(0, 30px));
-      .b-text-title {
-        display: inline;
-        font-family: "Samsung";
-        font-size: 16px;
-        color: $color_white;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      .b-btn-singup {
-        border: 1px solid $color_white;
-        padding: 12px 20px 10px 20px;
-        border-radius: 5px;
-        color: $color_white;
-        font-family: "Samsung";
-        text-decoration: none;
-        &:hover {
-          color: $white;
-          box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-        }
-      }
-    }
-    .b-lang {
-      .b-link {
-        position: absolute;
-        top: -5px;
-        right: 20px;
-        color: $color_white;
-        text-decoration: none;
-        font-family: "Samsung";
-        font-size: 14px;
-      }
-    }
-  }
-  &.b-bussiness {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 999;
-  }
   &.sticky {
+    display: none;
     position: fixed;
     width: 100%;
-    height: 80px;
-    background-color: #ed2839;
-    z-index: 9999;
+    background-color: #e74852;
     @include transition(all 0.3s ease-in-out);
-  }
-  .b-logo {
-    text-align: left;
-    img {
-      width: 60px;
-      &::selection {
-        background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
-      }
-    }
-  }
-  .b-page-nav {
-    .b-open-menu {
-      position: fixed;
-      right: 10px;
-      top: 30px;
-      i {
-        color: $white;
-        font-size: 26px;
-      }
-    }
-    .b-item {
-      display: inline-block;
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-top: 25px;
-      .b-link {
-        font-family: "Samsung";
-        color: $color_white;
-        font-size: 14px;
-        text-transform: uppercase;
-        &::selection {
-          background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
-        }
-        &:hover {
-          color: $white;
-        }
-      }
-    }
-  }
-  .b-login {
-    text-align: right;
-    .b-item-lang {
+    @media screen and (max-width: 992px) {
       display: block;
-      @include tranform(translate(0, -10px));
-      .b-link {
-        color: $color_white;
-        text-decoration: none;
-        font-family: "Samsung";
-        font-size: 12px;
-        &::selection {
-          background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
+    }
+  }
+  .b-header-top {
+    height: 30px;
+    text-align: right;
+    .b-link {
+      display: inline-block;
+      color: $color_white;
+      font-family: "Samsung";
+      text-decoration: none;
+      font-size: 14px;
+      align-self: center;
+      margin-top: 15px;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  .b-header-bottom {
+    display: block;
+    padding: 5px 0;
+    .b-header-left {
+      text-align: left;
+      display: flex;
+      .b-logo {
+        img {
+          width: 70px;
         }
-        &:hover {
-          color: $white;
+      }
+      .b-page-nav {
+        justify-content: center;
+        margin-top: 24px;
+        .b-open-menu {
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          i {
+            color: $white;
+            font-size: 30px;
+          }
+        }
+        .b-list-item {
+          .b-item {
+            display: inline;
+            margin: 0 16px 0 16px;
+            .b-link {
+              color: $color_white;
+              font-family: "Samsung";
+              font-size: 14px;
+              &:hover {
+                color: $white;
+              }
+            }
+          }
         }
       }
     }
-    .b-item {
-      display: inline-block;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      min-width: 130px;
-      text-align: center;
-      margin-top: -5px;
-      cursor: pointer;
-      &.is-active {
-        border: 1.2px solid $white;
-        border-radius: 5px;
-        &:hover {
-          box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-        }
-      }
-      .b-link {
-        color: $color_white;
-        font-size: 14px;
-        font-family: "Samsung";
-        text-decoration: none;
-        &::selection {
-          background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
-        }
-        &:hover {
-          color: $white;
+    .b-header-right {
+      text-align: right;
+      margin-top: 15px;
+      width: 100%;
+      .b-item {
+        display: inline;
+        margin: 0 0px 0 10px;
+        .b-link {
+          color: $color_white;
+          font-family: "Samsung";
+          font-size: 14px;
+          text-decoration: none;
+          text-align: center;
+          padding: 12px 0 8px 0;
+          border-radius: 5px;
+          &.b-register {
+            display: inline-block;
+            width: 170px;
+            border: 1px solid rgba(254, 180, 182, 0.52);
+            @include transition(all 0.3s ease-in-out);
+            &:hover {
+              border: 1px solid $white;
+            }
+          }
+          &:hover {
+            color: $white;
+          }
         }
       }
     }

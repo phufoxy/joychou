@@ -14,29 +14,7 @@
   height: 2px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
-p {
-  &::selection {
-    background: #ed2839;
-  }
-}
-h3 {
-  &::selection {
-    background: #ed2839;
-  }
-}
-a {
-  &::selection {
-    background: #ed2839;
-  }
-}
-img {
-  &::selection {
-    background: transparent;
-  }
-}
-.b-current {
-  color: #e74852;
-}
+
 @keyframes animationArrow {
   0% {
     top: 60%;
@@ -54,6 +32,7 @@ img {
   color: #fff;
   background: #ed2839;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -63,163 +42,189 @@ body {
   background-image: url("../images/home/background-top.png");
   z-index: 1;
 }
+.b-page-main {
+  overflow-x: hidden;
+}
 
-.b-index {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+.b-page-index {
+  position: relative;
+  &.b-en {
+    .b-overate {
+      .b-content {
+        .b-text-title {
+          line-height: 45px;
+        }
+      }
+    }
+  }
+}
+
+.b-main-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background-image: -webkit-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
   background-image: -moz-linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
   background-image: linear-gradient(-180deg, #ff4e40 5%, #e74852 48%, #ed2839 100%);
-  .b-page-intro {
+  padding: 100px 0 15px;
+  overflow: hidden;
+  display: flex;
+  .b-overate {
     position: relative;
-    .b-overate {
-      text-align: center;
-      background-image: url("../images/index/img-1.png");
-      background-repeat: no-repeat;
-      background-size: 20%;
-      background-position: bottom center;
-      height: 450px;
-      &::after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 1px;
-        background-color: $color_white;
-        right: 10px;
-        top: 0;
+    width: 50%;
+    text-align: center;
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $white;
+    }
+    .b-content {
+      .b-text-title {
+        font-size: 35px;
+        line-height: 79px;
+        text-align: center;
+        font-family: "Samsung";
+        color: $white;
+        letter-spacing: 0;
       }
-      .b-content {
-        padding: 0 70px 0 0;
-        width: 70%;
-        margin: 0 auto;
-        &.b-en {
-          width: 100%;
-          text-align: center;
-          .b-text-title {
-            width: 100%;
-            word-wrap: break-word;
-          }
-          .b-text-norm {
-            width: 80%;
-            word-wrap: break-word;
-            margin: 0 auto;
-            margin-bottom: 30px;
-          }
-        }
-        .b-text-title {
-          color: $white;
-          font-family: "Samsung";
-          font-size: 36px;
-        }
-        .b-text-norm {
-          margin-top: 20px;
-          color: $white;
-          font-family: "roboto";
-          margin-bottom: 30px;
-        }
+      .b-text-norm {
+        font-size: 16px;
+        font-family: "roboto";
+        line-height: 28px;
+        max-width: 100%;
+        width: 490px;
+        margin: 0 auto 22px;
+        color: $white;
+      }
+      .b-btn-find {
+        width: 100%;
+        margin-bottom: 25px;
+        text-align: center;
         .b-link {
+          display: inline-block;
+          font-size: 13px;
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          width: 226px;
+          border-radius: 120px;
+          padding: 17px 0 12px 0;
           background-color: $white;
-          padding: 18px 50px 15px 50px;
-          font-family: "Samsung";
-          border-radius: 50px;
           color: $black;
+          font-family: "Samsung";
+          letter-spacing: 0.5px;
           text-decoration: none;
-          transition: background-image 1s ease-out;
         }
         .b-ripple {
           background-origin: center;
-          transition: background 0.8s;
+          @include transition(background 1s);
           &:hover {
-            background: #fff radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+            background: $white radial-gradient(circle, transparent 1%, $white 1%) center/15000%;
           }
           &:active {
             background-color: #6eb9f7;
             background-size: 100%;
-            transition: background 0s;
+            @include transition(background 1s);
           }
-        }
-      }
-
-      > .b-images {
-        position: relative;
-        width: 100%;
-        left: 50%;
-        top: 100%;
-        @include tranform(translate(-50%, 10%));
-        img {
-          width: 200px;
         }
       }
     }
-    .b-enterprise {
-      background-image: url("../images/index/img-2.png");
-      background-repeat: no-repeat;
-      background-size: 40%;
-      background-position: 100% 80%;
-      height: 450px;
+    .b-images {
+      position: absolute;
+      top: 259px;
       width: 100%;
-
-      .b-content {
-        text-align: center;
-        padding: 0 0px 0 0px;
-        width: 60%;
-        margin: 0 auto;
-        &.b-en {
-          .b-text-title {
-            height: 80px;
-          }
-          .b-text-norm {
-            width: 60%;
-            margin: 0 auto;
-            margin-bottom: 30px;
-          }
-        }
-        .b-text-title {
-          color: $white;
-          font-family: "Samsung";
-          font-size: 36px;
-        }
-        .b-text-norm {
-          color: $white;
-          font-family: "roboto";
-          margin-bottom: 30px;
-        }
-        .b-link {
-          background-color: $white;
-          padding: 18px 50px 15px 50px;
-          font-family: "Samsung";
-          border-radius: 50px;
-          color: $black;
-          text-decoration: none;
-        }
-        .b-ripple {
-          background-origin: center;
-          transition: background 0.8s;
-          &:hover {
-            background: #fff radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-          }
-          &:active {
-            background-color: #6eb9f7;
-            background-size: 100%;
-            transition: background 0s;
-          }
-        }
-      }
-      > .b-images {
-        position: relative;
-        width: 100%;
-        @include tranform(translate(50%, 10%));
-        img {
-          width: 70%;
-        }
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
       }
     }
   }
-  .b-page-footer {
-    border-top: none;
+  .b-enterprise {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    .b-content {
+      .b-text-title {
+        font-size: 35px;
+        line-height: 79px;
+        text-align: center;
+        font-family: "Samsung";
+        color: $white;
+        letter-spacing: 0;
+      }
+      .b-text-norm {
+        font-size: 16px;
+        font-family: "roboto";
+        line-height: 28px;
+        max-width: 100%;
+        width: 490px;
+        margin: 0 auto 22px;
+        color: $white;
+      }
+      .b-btn-find {
+        width: 100%;
+        margin-bottom: 25px;
+        text-align: center;
+        .b-link {
+          display: inline-block;
+          font-size: 13px;
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          width: 226px;
+          border-radius: 120px;
+          padding: 17px 0 12px 0;
+          background-color: $white;
+          color: $black;
+          font-family: "Samsung";
+          letter-spacing: 0.5px;
+          text-decoration: none;
+        }
+        .b-ripple {
+          background-origin: center;
+          @include transition(background 1s);
+          &:hover {
+            background: $white radial-gradient(circle, transparent 1%, $white 1%) center/15000%;
+          }
+          &:active {
+            background-color: #6eb9f7;
+            background-size: 100%;
+            @include transition(background 1s);
+          }
+        }
+      }
+    }
+    .b-images {
+      position: absolute;
+      top: 259px;
+      width: 100%;
+      bottom: 0;
+      display: flex;
+      right: 0;
+      align-items: flex-end;
+      justify-content: flex-end;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+      }
+    }
   }
 }
+
 .b-page-hero {
   position: relative;
   background-image: url("../images/business/background-top.png");
@@ -271,42 +276,35 @@ body {
         width: 500px;
         word-wrap: break-word;
       }
-    }
-    .b-messeger {
-      position: absolute;
-      left: 20%;
-      top: 45%;
-      @include tranform(translate(-50%, -50%));
-      width: 200px;
-      padding: 16px 20px 12px 20px;
-      background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-      background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-      background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-      background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
-      border-radius: 50px;
-      text-align: center;
-      cursor: pointer;
-      &.b-en {
-        top: 68%;
-        left: 15%;
-      }
       .b-btn-messeger {
+        position: relative;
+        display: inline-block;
+        width: 226px;
+        padding: 16px 20px 12px 20px;
+        background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+        background-image: -moz-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+        background-image: -o-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+        background-image: linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
         color: $white;
         font-family: "Samsung";
         font-size: 18x;
         border-radius: 40px;
         text-decoration: none;
         margin-left: 10px;
-      }
-
-      i {
-        position: absolute;
-        left: 30px;
-        top: 10px;
-        font-size: 30px;
-        color: $white;
+        text-align: center;
+        i {
+          position: absolute;
+          left: 20%;
+          top: 50%;
+          @include tranform(translate(-50%, -50%));
+          font-size: 30px;
+        }
       }
     }
+
     .b-ripple {
       background-origin: center;
       transition: background 1s;
@@ -346,10 +344,12 @@ body {
       color: $white;
       font-family: "Samsung";
       font-size: 36px;
+      line-height: 50px;
     }
     .b-text-norm {
       color: $white;
       font-family: "roboto";
+      line-height: 30px;
     }
   }
   .b-watch {
@@ -359,30 +359,24 @@ body {
     @include tranform(translate(-50%, -50%));
     .b-item {
       display: inline-block;
-      width: 250px;
-      height: 50px;
-      background-color: $white;
-      text-align: center;
-      padding: 16px 10px 10px 10px;
-      margin-left: 10px;
-      margin-right: 10px;
-      border-radius: 50px;
-      box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-
+      padding-left: 10px;
+      padding-right: 10px;
       .b-link {
+        display: inline-block;
         background: transparent;
         color: $black;
         text-decoration: none;
         font-family: "Samsung";
         font-size: 14px;
-        width: 250px;
-        height: 100%;
-        @include transition(all 0.3s ease-in-out);
+        width: 200px;
+        text-align: center;
+        background-color: $white;
+        padding: 16px 20px 10px 20px;
+        border-radius: 50px;
       }
       &:hover {
-        background-color: #e74852;
         .b-link {
+          background-image: linear-gradient(-147deg, #ff516c 0, #ff5353 100%);
           color: $white;
         }
       }
@@ -390,7 +384,7 @@ body {
   }
   .b-images {
     position: absolute;
-    top: 90%;
+    top: 80%;
     left: 50%;
     background: transparent;
     width: 80%;
@@ -432,9 +426,10 @@ body {
     .b-text-norm {
       width: 100%;
       margin: 0 auto;
-      font-size: 24px;
-      letter-spacing: 1.5px;
-      font-family: "Samsung";
+      font-size: 23px;
+      letter-spacing: 0px;
+      line-height: 33px;
+      font-family: "roboto";
     }
   }
   .b-complain {
@@ -483,68 +478,211 @@ body {
   }
 }
 .b-page-function {
+  display: block;
   position: relative;
-  .b-images {
-    width: 100%;
-    text-align: center;
-    img {
-      width: 100%;
+  .b-block-function {
+    display: flex;
+    flex-wrap: wrap;
+    .b-function-left {
+      width: 50%;
+      align-self: center;
+      .b-images {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .b-content {
+        display: block;
+        // padding: 0 50px;
+        .b-text-function {
+          color: #e74852;
+          font-family: "Samsung";
+          font-size: 15px;
+        }
+        .b-text-title {
+          color: #3e3e3e;
+          font-size: "Samsung";
+          font-size: 42px;
+          font-weight: 700;
+        }
+        .b-text-norm {
+          color: #888888;
+          font-family: "roboto";
+          font-size: 14px;
+        }
+      }
+    }
+    .b-function-right {
+      width: 50%;
+      align-self: center;
+      .b-images {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .b-content {
+        padding: 0 50px;
+        .b-text-function {
+          color: #e74852;
+          font-family: "Samsung";
+          font-size: 15px;
+        }
+        .b-text-title {
+          color: #3e3e3e;
+          font-size: "Samsung";
+          font-size: 42px;
+          font-weight: 700;
+        }
+        .b-text-norm {
+          color: #888888;
+          font-family: "roboto";
+          font-size: 14px;
+        }
+      }
     }
   }
-  &.b-business {
-    .b-function {
-      position: relative;
-      @include tranform(translate(0%, 50%));
+}
+.b-page-feature {
+  display: block;
+  position: relative;
+  .b-block-function {
+    display: flex;
+    flex-wrap: wrap;
+    &:nth-child(2n + 1) {
+      .b-function-left {
+        width: 60%;
+      }
+      .b-function-right {
+        width: 40%;
+        .b-content {
+          padding-right: 100px;
+        }
+      }
     }
-  }
-  .b-function {
-    position: relative;
-    @include tranform(translate(0%, 150%));
-    .b-content {
-      // width: 80%;
-      padding: 0 40px 0 40px;
-      .b-text-function {
-        color: #e74852;
-        font-family: "Samsung";
-        font-size: 15px;
+    &:nth-child(2n) {
+      .b-function-left {
+        width: 40%;
+        .b-content {
+          padding-left: 100px;
+        }
       }
-      .b-text-title {
-        color: $black;
-        font-size: "Samsung";
-        font-size: 42px;
-        font-weight: 700;
+      .b-function-right {
+        width: 60%;
       }
-      > .b-text-norm {
-        color: #888888;
-        font-family: "roboto";
-        font-size: 14px;
-        width: 80%;
+    }
+    .b-function-left {
+      width: 50%;
+      align-self: center;
+      .b-images {
+        width: 100%;
+        img {
+          width: 100%;
+        }
       }
-      .b-list-function {
-        .b-item {
-          margin-top: 10px;
-          .b-icon {
-            display: inline-block;
-            position: relative;
-            width: 30px;
-            height: 30px;
-            background-color: $white;
-            box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-            border-radius: 100%;
-            @include tranform(translate(0, 10px));
-            i {
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              color: #e74852;
-              @include tranform(translate(-50%, -50%));
+      .b-content {
+        display: block;
+        .b-text-function {
+          color: #e74852;
+          font-family: "Samsung";
+          font-size: 15px;
+        }
+        .b-text-title {
+          color: #3e3e3e;
+          font-size: "roboto";
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 70px;
+        }
+        .b-text-norm {
+          color: #888888;
+          font-family: "roboto";
+          font-size: 14px;
+        }
+        .b-list-function {
+          .b-item {
+            display: flex;
+            line-height: 40px;
+            .b-icon {
+              position: relative;
+              padding-left: 10px;
+              padding-right: 10px;
+              display: inline-block;
+              min-width: 40px;
+              min-height: 40px;
+              max-width: 40px;
+              max-height: 40px;
+              border-radius: 100%;
+              box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+              i {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                @include tranform(translate(-50%, -50%));
+                color: #e74852;
+              }
             }
           }
           .b-text-norm {
-            display: inline;
             margin-left: 10px;
-            font-family: "roboto";
-            font-size: 16px;
+          }
+        }
+      }
+    }
+    .b-function-right {
+      width: 50%;
+      align-self: center;
+      .b-images {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .b-content {
+        .b-text-function {
+          color: #e74852;
+          font-family: "Samsung";
+          font-size: 15px;
+        }
+        .b-text-title {
+          color: #3e3e3e;
+          font-size: "roboto";
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 70px;
+        }
+        .b-text-norm {
+          color: #888888;
+          font-family: "roboto";
+          font-size: 14px;
+        }
+        .b-list-function {
+          .b-item {
+            display: flex;
+            line-height: 40px;
+            .b-icon {
+              position: relative;
+              padding-left: 10px;
+              padding-right: 10px;
+              display: inline-block;
+              min-width: 40px;
+              min-height: 40px;
+              max-width: 40px;
+              max-height: 40px;
+              border-radius: 100%;
+              box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+              i {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                @include tranform(translate(-50%, -50%));
+                color: #e74852;
+              }
+            }
+          }
+          .b-text-norm {
+            margin-left: 10px;
           }
         }
       }
@@ -638,14 +776,18 @@ body {
         @include transition(all 0.3s ease-in-out);
         z-index: 9999;
         &::after {
+          display: block;
+          content: "";
           position: absolute;
-          font-family: "Font Awesome 5 Free";
-          content: "\f0d9";
-          font-weight: 900;
           top: 30px;
-          left: -10px;
-          font-size: 26px;
-          color: #e74852;
+          height: 30px;
+          width: 30px;
+          left: -15px;
+          background-color: $white;
+          @include tranform(rotate(45deg));
+          z-index: -1;
+          border-left: 1px solid rgba(0, 0, 0, 0.2);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         }
         .b-text-title {
           font-family: "Samsung";
@@ -754,6 +896,7 @@ body {
     top: 50%;
     @include tranform(translate(-50%, -50%));
     text-align: center;
+    width: 100%;
     .b-text-title {
       font-family: "Samsung";
       font-size: 34px;
@@ -761,11 +904,11 @@ body {
       width: 100%;
       word-wrap: break-word;
     }
-    .b-messeger {
+    .b-btn-messeger {
       position: absolute;
       left: 50%;
-      top: 65%;
-      @include tranform(translate(-50%, 80%));
+      top: 50%;
+      @include tranform(translate(-50%, 100%));
       width: 200px;
       padding: 16px 20px 12px 20px;
       background-image: -webkit-linear-gradient(-176deg, #00c6ff 0, #0070ff 99%);
@@ -775,22 +918,19 @@ body {
       border-radius: 50px;
       text-align: center;
       cursor: pointer;
-
-      .b-btn-messeger {
-        color: $white;
-        font-family: "Samsung";
-        font-size: 18x;
-        border-radius: 40px;
-        text-decoration: none;
-        margin-left: 10px;
-      }
-
+      color: $white;
+      font-family: "Samsung";
+      font-size: 18x;
+      border-radius: 40px;
+      text-decoration: none;
+      margin-left: 10px;
+      text-align: center;
       i {
         position: absolute;
-        left: 30px;
-        top: 10px;
+        left: 20%;
+        top: 50%;
+        @include tranform(translate(-50%, -50%));
         font-size: 30px;
-        color: $white;
       }
     }
     .b-ripple {
@@ -808,58 +948,54 @@ body {
   }
 }
 .b-page-business {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   background-image: url("../images/home/bottom-banner.png");
-  background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: center;
-  height: auto;
-  width: 100%;
-  .b-images {
-    margin-top: 50px;
+  padding: 100px 0 0 0;
+  .b-business-left {
     width: 50%;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
   }
-  .b-content {
-    position: relative;
-    margin-top: 50px;
+  .b-business-right {
     width: 50%;
-    text-align: left;
-    .b-info {
-      position: absolute;
-      left: 30%;
-      top: 50%;
-      @include tranform(translate(-50%, -50%));
+    align-self: center;
+    .b-content {
+      padding: 20px;
       .b-text-title {
-        color: $white;
         font-family: "Samsung";
-        font-size: 26px;
+        line-height: 50px;
+        font-size: 36px;
+        color: $white;
       }
       .b-text-norm {
-        color: $color_white;
         font-family: "roboto";
         font-size: 16px;
-        margin-top: 20px;
-        margin-bottom: 30px;
-        max-width: 260px;
-        word-wrap: break-word;
+        color: $color_white;
       }
       .b-link {
+        position: relative;
+        display: inline-block;
         width: 250px;
-        border: 0.5px solid $white;
-        padding: 20px 20px 16px 20px;
-        border-radius: 50px;
+        border: 1px solid rgba(254, 180, 182, 0.52);
         text-align: center;
+        padding: 16px 30px 14px 30px;
+        border-radius: 50px;
         text-decoration: none;
-        color: $white;
         font-family: "Samsung";
-        &::after {
-          font-family: "Font Awesome 5 Free";
-          content: "\f061";
-          font-weight: 900;
+        color: $white;
+        font-size: 14px;
+        i {
+          position: absolute;
+          right: 10px;
+          top: 50%;
           font-size: 20px;
-          padding: 10px;
+          @include tranform(translate(-50%, -50%));
         }
       }
     }
@@ -994,7 +1130,7 @@ body {
         }
         .b-link {
           padding: 10px 30px 10px 30px;
-          border: 1px solid $white;
+          border: 1px solid rgba(254, 180, 182, 0.52);
           border-radius: 5px;
           text-decoration: none;
           color: $white;
@@ -1025,7 +1161,7 @@ body {
     }
     .b-content {
       position: absolute;
-      width: 80%;
+      width: 100%;
       left: 50%;
       top: 50%;
       @include tranform(translate(-50%, -50%));
@@ -1049,7 +1185,7 @@ body {
             height: 50px;
             padding-left: 20px;
             padding-right: 20px;
-            border: 1px solid #888888;
+            border: 1px solid rgba(254, 180, 182, 0.52);
             font-family: "roboto";
             @include transition(all 0.3s ease-in-out);
             outline: 0 !important;

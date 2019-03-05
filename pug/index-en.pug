@@ -3,7 +3,7 @@ html(lang='en')
     include head/_site-head
     body
         include loader/_site-loader
-        .b-index
+        .b-wrapper
             .site-mobile-menu
                 .site-mobile-menu-header
                     .site-mobile-menu-close
@@ -11,54 +11,58 @@ html(lang='en')
                             i.fas.fa-window-close
                 .site-mobile-menu-body
                 .site-mobile-menu-lang
-            header.b-page-header#b-page-header
+            header.b-page-header.b-index#b-page-header
                 .container
-                    .row
-                        .col-lg-1
-                            .b-logo
-                                a(href="index-en.html").b-link
-                                    img(src="./images/partial/logo.png", alt="Logo")
-                        .col-lg-6
-                            nav.b-page-nav
-                                .b-open-menu.d-lg-none
-                                    a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
-                                ul.b-list-item.js-clone-nav.d-lg-block
-                                                -var listItem = [{item:'User',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
-                                                each itemList in listItem
-                                                    li.b-item
-                                                        -var get = itemList.link
-                                                        a(href=get).b-link #{itemList.item}
-                        .col-lg-5
-                            .b-login.js-clone-lang.d-lg-block.d-none
-                                .b-item-lang
-                                    a(href="index.html").b-link VIETNAMESE
-                                .b-item
-                                    a(href="signin.html").b-link SIGN IN
-                                .b-item.is-active
-                                    a(href="#").b-link SIGN UP
-            section.b-page-intro
-                .container-fluid
-                    .row
-                        .col-lg-6
-                            .b-overate.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                .b-content.b-en
-                                    h3.b-text-title
-                                        :verbatim
-                                            Revolutionary Artificial Intelligent Assitant
-                                    p.b-text-norm 
-                                        :verbatim
-                                            Your friendly virtual dining assitant. Find right dining place in the right time. Inbox "Gonjoy" on Facebook Messenger
-                                    a(href="#").b-link.b-ripple FIND OUT
-                        .col-lg-6
-                            .b-enterprise.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                .b-content.b-en
-                                    h3.b-text-title Joy and Business
-                                    p.b-text-norm 
-                                        :verbatim
-                                            Connect your customer 24/7.
-                                            Support your business 24/7.
-                                    a(href="#").b-link.b-ripple FIND OUT
-            footer.b-page-footer
+                    .b-header-top.d-lg-block.d-none
+                            .b-item-lang
+                                a(href="index.html").b-link VIETNAMESE
+                    .b-header-bottom
+                            .row
+                                .col-lg-8
+                                    .b-header-left
+                                        .b-logo
+                                            a(href="index-en.html").b-link
+                                                img(src="./images/partial/logo.png", alt="Logo")
+                                        nav.b-page-nav
+                                            .b-open-menu.d-lg-none
+                                                a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
+                                            ul.b-list-item.js-clone-nav.d-lg-block.d-none
+                                                            -var listItem = [{item:'USER',link:'user-en.html'},{item:'BUSINESS',link:'bussiness-en.html'},{item:'FAQ',link:'bussiness.html'},{item:'ABOUT US',link:'about-en.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                                            each itemList in listItem
+                                                                li.b-item
+                                                                    -var get = itemList.link
+                                                                    a(href=get).b-link #{itemList.item}
+                                .col-lg-4
+                                    .b-header-right
+                                        .b-login.js-clone-lang.d-lg-block.d-none
+                                            .b-item
+                                                a(href="signin.html").b-link SIGN IN
+                                            .b-item
+                                                a(href="#").b-link.b-register Sign up
+            section.b-page-main.b-page-index.b-en
+                .b-main-content
+                    .b-overate.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
+                        .b-content
+                            h3.b-text-title Revolutionary Artificial Intelligent Assitant
+                            p.b-text-norm 
+                                :verbatim
+                                    Your friendly virtual dining assitant. Find right dining place in the right time. Inbox "Gonjoy" on Facebook Messenger
+                            .b-btn-find
+                                a(href="#").b-link.b-ripple FIND OUT
+                        .b-images
+                            img(src="./images/index/img-1.png", alt="Img")
+                    .b-enterprise.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")
+                        .b-content
+                            h3.b-text-title Joy and Business
+                            p.b-text-norm 
+                                :verbatim
+                                    Connect your customer 24/7.
+                                    Support your business 24/7.
+                            .b-btn-find
+                                a(href="#").b-link.b-ripple FIND OUT
+                        .b-images
+                            img(src="./images/index/img-2.png", alt="Img")
+            footer.b-page-footer.b-index#b-footer
                 .container
                     .row
                         .col-lg-1

@@ -25,34 +25,40 @@
         <div class="site-mobile-menu-body"></div>
         <div class="site-mobile-menu-lang"></div>
       </div>
-      <header class="b-page-header b-bussiness" id="b-page-header">
+      <header class="b-page-header b-index" id="b-page-header">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-1">
-              <div class="b-logo"><a class="b-link" href="index.html"><img src="./images/partial/logo.png" alt="Logo"></a></div>
-            </div>
-            <div class="col-lg-6">
-              <nav class="b-page-nav">
-                <div class="b-open-menu d-lg-none"><a class="site-menu-toggle js-menu-toggle" href="#"><i class="fas fa-bars"></i></a></div>
-                <ul class="b-list-item js-clone-nav d-lg-block">
-                  <li class="b-item"><a class="b-link" href="user.html">NGƯỜI DÙNG</a>
-                  </li>
-                  <li class="b-item"><a class="b-link" href="bussiness.html">DOANH NGHIỆP</a>
-                  </li>
-                  <li class="b-item"><a class="b-link" href="bussiness.html">FAQ</a>
-                  </li>
-                  <li class="b-item"><a class="b-link" href="about.html">VỀ CHÚNG TÔI</a>
-                  </li>
-                  <li class="b-item"><a class="b-link" href="bussiness.html">BLOCK</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="col-lg-5">
-              <div class="b-login js-clone-lang d-lg-block d-none">
-                <div class="b-item-lang"><a class="b-link" href="user-en.html">ENGLISH</a></div>
-                <div class="b-item"><a class="b-link" href="signin.html">ĐĂNG NHẬP</a></div>
-                <div class="b-item is-active"><a class="b-link" href="signup.html">Đăng ký miễn phí</a></div>
+          <div class="b-header-top d-lg-block d-none">
+            <div class="b-item-lang"><a class="b-link" href="user-en.html">ENGLISH</a></div>
+          </div>
+          <div class="b-header-bottom">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="b-header-left">
+                  <div class="b-logo"><a class="b-link" href="index.html"><img src="./images/partial/logo.png" alt="Logo"></a></div>
+                  <nav class="b-page-nav">
+                    <div class="b-open-menu d-lg-none"><a class="site-menu-toggle js-menu-toggle" href="#"><i class="fas fa-bars"></i></a></div>
+                    <ul class="b-list-item js-clone-nav d-lg-block d-none">
+                      <li class="b-item"><a class="b-link" href="user.html">NGƯỜI DÙNG</a>
+                      </li>
+                      <li class="b-item"><a class="b-link" href="bussiness.html">DOANH NGHIỆP</a>
+                      </li>
+                      <li class="b-item"><a class="b-link" href="bussiness.html">FAQ</a>
+                      </li>
+                      <li class="b-item"><a class="b-link" href="about.html">VỀ CHÚNG TÔI</a>
+                      </li>
+                      <li class="b-item"><a class="b-link" href="bussiness.html">BLOCK</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="b-header-right">
+                  <div class="b-login js-clone-lang d-lg-block d-none">
+                    <div class="b-item"><a class="b-link" href="signin.html">ĐĂNG NHẬP</a></div>
+                    <div class="b-item"><a class="b-link b-register" href="#">Đăng ký miễn phí</a></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -62,9 +68,8 @@
         <div class="container">
           <div class="b-content">
             <h3 class="b-text-title wow fadeInDown" data-wow-delay="1s" data-wow-duration="1s">Trợ lý Ảo đột phá</h3>
-            <p class="b-text-norm wow fadeInDown" data-wow-delay="1s" data-wow-duration="1s">  Người trợ lý với lời khuyên ẩm thực chất lừ cho bạn. Inbox ngay Gonhhoy trên Facebook Messager</p>
+            <p class="b-text-norm wow fadeInDown" data-wow-delay="1s" data-wow-duration="1s">  Người trợ lý với lời khuyên ẩm thực chất lừ cho bạn. Inbox ngay Gonhhoy trên Facebook Messager</p><a class="b-btn-messeger b-ripple" href="#">Messager<i class="fab fa-facebook-messenger"></i></a>
           </div>
-          <div class="b-messeger b-ripple"><a class="b-btn-messeger" href="#">Messager</a><i class="fab fa-facebook-messenger"></i></div>
           <div class="b-images"><img src="./images/home/top-banner-item.png" alt="Bussiness"></div>
           <div class="b-scroll-bottom" id="top-menu"><a class="b-link" href="#function">CUỘN XUỐNG</a></div>
         </div>
@@ -154,81 +159,68 @@
         </div>
       </section>
       <section class="b-page-function" id="function">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-6">
+        <div class="container">
+          <div class="b-block-function">
+            <div class="b-function-left">
               <div class="b-images wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1s"><img src="./images/home/block-1.png" alt="Table"></div>
             </div>
-            <div class="col-lg-6">
-              <div class="b-function">
-                <div class="b-content wow fadeInRight" data-wow-delay="1s" data-wow-duration="1s">
-                  <h3 class="b-text-title">Gợi Ý Sức Khỏe</h3>
-                  <p class="b-text-norm">
+            <div class="b-function-right">
+              <div class="b-content wow fadeInRight" data-wow-delay="1s" data-wow-duration="1s">
+                <h3 class="b-text-title">Gợi Ý Sức Khỏe</h3>
+                <p class="b-text-norm">
 orem ipsum dolor sit amet, consectetur adipiscing elit. 
 Pellentesque eleifend tempus lorem, a auctor eros pretium 
-sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+sit amet. Aliquam faucibus est lectus, nec malesuada sem
 
-
-                  </p>
-                </div>
+                </p>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="b-function">
-                <div class="b-content wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1s">
-                  <h3 class="b-text-title">Chơi game góp ý</h3>
-                  <p class="b-text-norm">
+          <div class="b-block-function">
+            <div class="b-function-left">
+              <div class="b-content wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1s">
+                <h3 class="b-text-title">Gợi Ý Sức Khỏe</h3>
+                <p class="b-text-norm">
 orem ipsum dolor sit amet, consectetur adipiscing elit. 
 Pellentesque eleifend tempus lorem, a auctor eros pretium 
 sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-elementum in.
 
-                  </p>
-                </div>
+                </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="b-function-right">
               <div class="b-images wow fadeInRight" data-wow-delay="1s" data-wow-duration="1s"><img src="./images/home/block-2.png" alt="Table"></div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6">
+          <div class="b-block-function">
+            <div class="b-function-left">
               <div class="b-images wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1s"><img src="./images/home/block-3.png" alt="Table"></div>
             </div>
-            <div class="col-lg-6">
-              <div class="b-function">
-                <div class="b-content wow fadeInRight" data-wow-delay="1s" data-wow-duration="1s">
-                  <h3 class="b-text-title">Hệ thống phân tích ngôn ngữ</h3>
-                  <p class="b-text-norm">
+            <div class="b-function-right">
+              <div class="b-content wow fadeInRight" data-wow-delay="1s" data-wow-duration="1s">
+                <h3 class="b-text-title">Gợi Ý Sức Khỏe</h3>
+                <p class="b-text-norm">
 orem ipsum dolor sit amet, consectetur adipiscing elit. 
 Pellentesque eleifend tempus lorem, a auctor eros pretium 
-sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-elementum in.
+sit amet. Aliquam faucibus est lectus, nec malesuada sem
 
-
-                  </p>
-                </div>
+                </p>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="b-function">
-                <div class="b-content wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1s">
-                  <h3 class="b-text-title">Cá Nhân hóa</h3>
-                  <p class="b-text-norm">
+          <div class="b-block-function">
+            <div class="b-function-left">
+              <div class="b-content wow fadeInLeft" data-wow-delay="1s" data-wow-duration="1s">
+                <h3 class="b-text-title">Gợi Ý Sức Khỏe</h3>
+                <p class="b-text-norm">
 orem ipsum dolor sit amet, consectetur adipiscing elit. 
 Pellentesque eleifend tempus lorem, a auctor eros pretium 
 sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-elementum in.
 
-                  </p>
-                </div>
+                </p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="b-function-right">
               <div class="b-images wow fadeInRight" data-wow-delay="1s" data-wow-duration="1s"><img src="./images/home/block-4.png" alt="Table"></div>
             </div>
           </div>
@@ -236,16 +228,19 @@ elementum in.
       </section>
       <section class="b-page-service">
         <div class="b-content">
-          <h3 class="b-text-title wow fadeInUp" data-wow-delay="1s" data-wow-duration="1s">Hãy để <span class="b-current">Joy</span> phục vụ bạn ngay bây giờ !</h3>
-          <div class="b-messeger b-ripple"><a class="b-btn-messeger" href="#">Messager</a><i class="fab fa-facebook-messenger"></i></div>
+          <h3 class="b-text-title wow fadeInUp" data-wow-delay="1s" data-wow-duration="1s">Hãy để <span class="b-current">Joy</span> phục vụ bạn ngay bây giờ !</h3><a class="b-btn-messeger b-ripple" href="#">Messager<i class="fab fa-facebook-messenger"></i></a>
         </div>
       </section>
       <section class="b-page-business">
-        <div class="b-images wow fadeInRight" data-wow-delay="1s" data-wow-duration="1s"><img src="./images/home/bottom-banner-item.png" alt="Banner" style="width:100%"></div>
-        <div class="b-content">
-          <div class="b-info">
-            <h3 class="b-text-title">Joy và Doanh nghiệp</h3>
-            <p class="b-text-norm">Kết nối khách hàng của bạn 24/7 Hổ trợ việc kinh doanh của bạn 24/7</p><a class="b-link" href="#">Khám phá các lợi ích</a>
+        <div class="b-business-left">
+          <div class="b-images wow fadeInRight" data-wow-delay="1s" data-wow-duration="1s"><img src="./images/home/bottom-banner-item.png" alt="Banner" style="width:100%"></div>
+        </div>
+        <div class="b-business-right">
+          <div class="b-content">
+            <div class="b-info">
+              <h3 class="b-text-title">Joy và Doanh nghiệp</h3>
+              <p class="b-text-norm">Kết nối khách hàng của bạn 24/7 Hổ trợ việc kinh doanh của bạn 24/7</p><a class="b-link" href="#">Khám phá các lợi ích<i class="fas fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
       </section>

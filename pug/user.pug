@@ -11,40 +11,41 @@ html(lang='en')
                             i.fas.fa-window-close
                 .site-mobile-menu-body
                 .site-mobile-menu-lang
-            header.b-page-header.b-bussiness#b-page-header
+            header.b-page-header.b-index#b-page-header
                 .container
-                    .row
-                        .col-lg-1
-                            .b-logo
-                                a(href="index.html").b-link
-                                    img(src="./images/partial/logo.png", alt="Logo")
-                        .col-lg-6
-                            nav.b-page-nav
-                                .b-open-menu.d-lg-none
-                                    a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
-                                ul.b-list-item.js-clone-nav.d-lg-block
-                                    -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
-                                    each itemList in listItem
-                                        li.b-item
-                                            -var get = itemList.link
-                                            a(href=get).b-link #{itemList.item}
-                        .col-lg-5
-                            .b-login.js-clone-lang.d-lg-block.d-none
-                                .b-item-lang
-                                    a(href="user-en.html").b-link ENGLISH
-                                .b-item
-                                    a(href="signin.html").b-link ĐĂNG NHẬP
-                                .b-item.is-active
-                                    a(href="signup.html").b-link Đăng ký miễn phí
+                    .b-header-top.d-lg-block.d-none
+                            .b-item-lang
+                                a(href="user-en.html").b-link ENGLISH
+                    .b-header-bottom
+                            .row
+                                .col-lg-8
+                                    .b-header-left
+                                        .b-logo
+                                            a(href="index.html").b-link
+                                                img(src="./images/partial/logo.png", alt="Logo")
+                                        nav.b-page-nav
+                                            .b-open-menu.d-lg-none
+                                                a(href="#").site-menu-toggle.js-menu-toggle #[i.fas.fa-bars]
+                                            ul.b-list-item.js-clone-nav.d-lg-block.d-none
+                                                            -var listItem = [{item:'NGƯỜI DÙNG',link:'user.html'},{item:'DOANH NGHIỆP',link:'bussiness.html'},{item:'FAQ',link:'bussiness.html'},{item:'VỀ CHÚNG TÔI',link:'about.html'},{item:'BLOCK',link:'bussiness.html'}] 
+                                                            each itemList in listItem
+                                                                li.b-item
+                                                                    -var get = itemList.link
+                                                                    a(href=get).b-link #{itemList.item}
+                                .col-lg-4
+                                    .b-header-right
+                                        .b-login.js-clone-lang.d-lg-block.d-none
+                                            .b-item
+                                                a(href="signin.html").b-link ĐĂNG NHẬP
+                                            .b-item
+                                                a(href="#").b-link.b-register Đăng ký miễn phí
             section.b-page-hero.b-users
                 .container
                     .b-content
                         h3.b-text-title.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s") Trợ lý Ảo đột phá
                         p.b-text-norm.wow.fadeInDown(data-wow-delay="1s",data-wow-duration="1s")   Người trợ lý với lời khuyên ẩm thực chất lừ cho bạn. Inbox ngay Gonhhoy trên Facebook Messager
-                        
-                    .b-messeger.b-ripple
-                        a(href="#").b-btn-messeger Messager
-                        i.fab.fa-facebook-messenger
+                        a(href="#").b-btn-messeger.b-ripple Messager
+                            i.fab.fa-facebook-messenger
                     .b-images
                         img(src="./images/home/top-banner-item.png", alt="Bussiness")
                     .b-scroll-bottom#top-menu
@@ -66,79 +67,72 @@ html(lang='en')
                                 .b-content
                                     p.b-text-norm #{item.title}
             section.b-page-function#function
-                .container-fluid
-                    .row
-                        .col-lg-6
+                .container
+                    .b-block-function
+                        .b-function-left
                             .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/home/block-1.png", alt="Table")
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title Gợi Ý Sức Khỏe
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                    
-                    .row
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title Chơi game góp ý
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                        .col-lg-6
+                        .b-function-right
+                            .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                                h3.b-text-title Gợi Ý Sức Khỏe
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem
+                    .b-block-function
+                        .b-function-left
+                            .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
+                                h3.b-text-title Gợi Ý Sức Khỏe
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                        .b-function-right
                             .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/home/block-2.png", alt="Table")
-                    .row
-                        .col-lg-6
+                    .b-block-function
+                        .b-function-left
                             .b-images.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/home/block-3.png", alt="Table")
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title Hệ thống phân tích ngôn ngữ
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                                  
-                    .row
-                        .col-lg-6
-                            .b-function
-                                .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
-                                    h3.b-text-title Cá Nhân hóa
-                                    p.b-text-norm
-                                        :verbatim
-                                            orem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Pellentesque eleifend tempus lorem, a auctor eros pretium 
-                                            sit amet. Aliquam faucibus est lectus, nec malesuada sem 
-                                            elementum in.
-                        .col-lg-6
+                        .b-function-right
+                            .b-content.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                                h3.b-text-title Gợi Ý Sức Khỏe
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem
+                    .b-block-function
+                        .b-function-left
+                            .b-content.wow.fadeInLeft(data-wow-delay="1s",data-wow-duration="1s")
+                                h3.b-text-title Gợi Ý Sức Khỏe
+                                p.b-text-norm
+                                    :verbatim
+                                        orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Pellentesque eleifend tempus lorem, a auctor eros pretium 
+                                        sit amet. Aliquam faucibus est lectus, nec malesuada sem 
+                        .b-function-right
                             .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
                                 img(src="./images/home/block-4.png", alt="Table")
-                    
+                            
             section.b-page-service
                 .b-content
                     h3.b-text-title.wow.fadeInUp(data-wow-delay="1s",data-wow-duration="1s") Hãy để #[span.b-current Joy] phục vụ bạn ngay bây giờ !
-                    .b-messeger.b-ripple
-                        a(href="#").b-btn-messeger Messager
+                    a(href="#").b-btn-messeger.b-ripple Messager
                         i.fab.fa-facebook-messenger
             section.b-page-business
-                .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
-                    img(src="./images/home/bottom-banner-item.png", alt="Banner", style="width:100%")
-                .b-content
-                    .b-info
-                        h3.b-text-title Joy và Doanh nghiệp
-                        p.b-text-norm Kết nối khách hàng của bạn 24/7 Hổ trợ việc kinh doanh của bạn 24/7
-                        a(href="#").b-link Khám phá các lợi ích
+                .b-business-left
+                    .b-images.wow.fadeInRight(data-wow-delay="1s",data-wow-duration="1s")
+                        img(src="./images/home/bottom-banner-item.png", alt="Banner", style="width:100%")
+                .b-business-right
+                    .b-content
+                        .b-info
+                            h3.b-text-title Joy và Doanh nghiệp
+                            p.b-text-norm Kết nối khách hàng của bạn 24/7 Hổ trợ việc kinh doanh của bạn 24/7
+                            a(href="#").b-link Khám phá các lợi ích
+                                i.fas.fa-arrow-right
             footer.b-page-footer.b-footer-main
                 .container
                     .row
